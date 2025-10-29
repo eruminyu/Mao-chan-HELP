@@ -179,3 +179,11 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# VS Code
+.vscode/
+
+# User Specific Files (추가)
+config.json # 사용자 설정 파일은 제외 (선택 사항)
+debug_*.png # 디버깅용 이미지 파일 제외
+./test/

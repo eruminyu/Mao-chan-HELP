@@ -1,0 +1,4958 @@
+{
+  "characters": [
+    {
+      "id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "name": "치토세",
+      "attribute": "물",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "name": "테레사",
+      "attribute": "물",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "name": "아야메",
+      "attribute": "물",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "name": "프리지아",
+      "attribute": "물",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "name": "시먀오",
+      "attribute": "물",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "name": "미스티",
+      "attribute": "어둠",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "name": "나노하",
+      "attribute": "바람",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "name": "카라멜",
+      "attribute": "어둠",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "name": "크루니스",
+      "attribute": "어둠",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "name": "코제트",
+      "attribute": "어둠",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "name": "세이나",
+      "attribute": "바람",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "name": "카나체",
+      "attribute": "바람",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "name": "안즈",
+      "attribute": "바람",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "name": "그레이",
+      "attribute": "땅",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "name": "나즈나",
+      "attribute": "땅",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "name": "레이센",
+      "attribute": "땅",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "name": "미네르바",
+      "attribute": "빛",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "name": "라루",
+      "attribute": "빛",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "name": "징린",
+      "attribute": "빛",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "name": "틸리아",
+      "attribute": "빛",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "name": "시아",
+      "attribute": "빛",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "name": "치시아",
+      "attribute": "불",
+      "rarity": "5성"
+    },
+    {
+      "id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "name": "코하쿠",
+      "attribute": "불",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "name": "카시미라",
+      "attribute": "불",
+      "rarity": "4성"
+    },
+    {
+      "id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "name": "플로라",
+      "attribute": "불",
+      "rarity": "4성"
+    }
+  ],
+  "potentials": [
+    {
+      "id": "p_80cc7db3-919a-45c6-91c5-25b4a6393c38",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main1",
+      "name": "등사 파도"
+    },
+    {
+      "id": "p_ecca3583-51f6-4f58-ae85-c91df2487d1f",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main1",
+      "name": "그림자의 칼날"
+    },
+    {
+      "id": "p_7fa1e7fc-f6d1-4b82-a8c6-79f76fcda71b",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main1",
+      "name": "환상 비늘"
+    },
+    {
+      "id": "p_fa0dd288-2e13-460c-b3bb-1c4c6be444f5",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main1",
+      "name": "그림자 낙하"
+    },
+    {
+      "id": "p_d2921d82-31aa-4930-b0db-c5dc87c7f5dd",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main1",
+      "name": "가녀린 춤사위"
+    },
+    {
+      "id": "p_f6e6a4a2-be1a-4353-9c9b-6880bd3dcb66",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main2",
+      "name": "하늘 베기"
+    },
+    {
+      "id": "p_72980625-4379-4583-ab68-30ef83740120",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main2",
+      "name": "역류하는 여울빛"
+    },
+    {
+      "id": "p_494553bf-1ac4-4d82-8517-cd6c31040b28",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main2",
+      "name": "끝없는 물살"
+    },
+    {
+      "id": "p_75292027-2276-4d6a-9366-dc60df5151ab",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main2",
+      "name": "파도 뱀"
+    },
+    {
+      "id": "p_7911d4f6-1677-470e-8ee9-dd7602913593",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main2",
+      "name": "거울 같은 물"
+    },
+    {
+      "id": "p_dbffb93f-c937-4b3e-a021-52c2107ed3f5",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "파도의 물살"
+    },
+    {
+      "id": "p_bbe2190a-7d97-41f8-821c-447429660d54",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "물결의 몸짓"
+    },
+    {
+      "id": "p_c2179907-166e-4d5e-a318-7bb1b26ff168",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "굳센 보호막"
+    },
+    {
+      "id": "p_7da5ac24-df9f-44e3-962d-fc1e3632bb25",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "응고의 독액"
+    },
+    {
+      "id": "p_4f31a76f-1174-408b-9994-057e1f10e3d3",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "뱀 춤의 물결"
+    },
+    {
+      "id": "p_74e54e4a-bca4-4b68-8ef8-50e22c9a36df",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "main_common",
+      "name": "얼어붙은 뱀의 뼈"
+    },
+    {
+      "id": "p_61849b78-6c11-414b-a208-8ae222b7ea45",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support1",
+      "name": "칼날의 잠행"
+    },
+    {
+      "id": "p_41fafe0c-bef1-4815-bcba-d811f0e768a9",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support1",
+      "name": "물 검의 소용돌이"
+    },
+    {
+      "id": "p_5e0c1b9b-0676-4cf3-b094-05cd8ff990a8",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support1",
+      "name": "검의 울음"
+    },
+    {
+      "id": "p_231b5fea-67a8-42b3-8923-26e50defe43e",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support1",
+      "name": "삭인연참"
+    },
+    {
+      "id": "p_2033ff87-c591-436d-98c8-796add2186a5",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support1",
+      "name": "빗방울 검무"
+    },
+    {
+      "id": "p_26214853-12b4-4b98-9853-b87bd87d9a78",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support2",
+      "name": "깊은 곳의 숨결"
+    },
+    {
+      "id": "p_ae004b9c-3b90-4794-9fff-21784309cda6",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support2",
+      "name": "흩어지는 물결"
+    },
+    {
+      "id": "p_b65a56ae-c483-449f-ac7e-dd195e5d8a37",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support2",
+      "name": "부서진 그림자의 침묵"
+    },
+    {
+      "id": "p_ed28a9f0-df0d-4a4d-af8e-1c596207e61d",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support2",
+      "name": "물속의 그림자 베기"
+    },
+    {
+      "id": "p_ecceb57e-7bed-4fc1-bc80-466b3b80f4aa",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support2",
+      "name": "그림자 조류"
+    },
+    {
+      "id": "p_b0a3e4a6-d85b-435d-b04f-129f5e358220",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "물 정령의 숨겨진 칼날"
+    },
+    {
+      "id": "p_4636bcc2-2d9c-40f9-bdea-3dcf274fc811",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "파문을 가르는 검"
+    },
+    {
+      "id": "p_94da1f95-0330-4c85-bd87-a7ae387977b5",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "물살의 고리 검"
+    },
+    {
+      "id": "p_a9f7315a-6a55-4286-a780-ce80d8f7719c",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "응고의 독액"
+    },
+    {
+      "id": "p_390c01fe-8976-4ef8-8f6f-0b47becbd992",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "뱀 춤의 물결"
+    },
+    {
+      "id": "p_e7d9f7ba-b88a-4ce8-bcda-2b12bc6fc16b",
+      "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
+      "style_type": "support_common",
+      "name": "얼어붙은 뱀의 뼈"
+    },
+    {
+      "id": "p_0028e8a1-aa8f-438b-b84b-7e22fbbf6045",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main1",
+      "name": "물결•폭포의 일격"
+    },
+    {
+      "id": "p_ef08a6d2-7f8f-42bb-bfb6-4bb132e517ae",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main1",
+      "name": "물결•진축의 참격"
+    },
+    {
+      "id": "p_bad00a7e-41d6-413d-a397-ef60544091a3",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main1",
+      "name": "불타는 열정"
+    },
+    {
+      "id": "p_6ec9c796-f5a5-4964-ac9e-ceac0794f696",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main1",
+      "name": "마검의 위압"
+    },
+    {
+      "id": "p_4cfb3c5f-e64f-4957-8dfb-2b890e2d9793",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main1",
+      "name": "혼탁한 물결"
+    },
+    {
+      "id": "p_2dfd0c67-13df-46b4-a7dd-34b77643c819",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main2",
+      "name": "물결•휘감는 구름"
+    },
+    {
+      "id": "p_8c21ba9b-1e6d-4c86-87ab-da3a29c3f9c1",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main2",
+      "name": "물결•덮치는 물방울"
+    },
+    {
+      "id": "p_a0319209-f852-4da2-8fd1-9a44b4d486d1",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main2",
+      "name": "재개하는 힘"
+    },
+    {
+      "id": "p_2634d7e9-300b-406b-ad7d-0cea7234f8b4",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main2",
+      "name": "수호의 은총"
+    },
+    {
+      "id": "p_fef7f8fd-c299-47f0-baa5-090a923d3154",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main2",
+      "name": "마검의 에너지 흡수"
+    },
+    {
+      "id": "p_d416d5d1-f62e-415c-9897-d11266ec5a10",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "대체불가한 인연"
+    },
+    {
+      "id": "p_f1ebd030-4145-43f3-9f28-07d06371f8d9",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "마법 방패 강화"
+    },
+    {
+      "id": "p_7102869d-8c5a-4674-8e93-6a701776b530",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "차징 일격"
+    },
+    {
+      "id": "p_48aad0b2-ccbf-48e3-8a00-c5615450001e",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "끝없는 파도"
+    },
+    {
+      "id": "p_1341aad0-d123-4db1-9fec-6733134c6826",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "속성 해방"
+    },
+    {
+      "id": "p_92052905-519d-454a-9729-6aa96392ddb7",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "main_common",
+      "name": "마성의 침식"
+    },
+    {
+      "id": "p_6172ce04-6371-48d6-ba28-e77e8e2bb3fc",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support1",
+      "name": "끝없는 분출•무한"
+    },
+    {
+      "id": "p_51d835e7-8edd-4401-b458-6cb114dbf5bb",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support1",
+      "name": "끝없는 분출•물결"
+    },
+    {
+      "id": "p_fb875be5-3931-4b3d-bdcb-fd5707ca062a",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support1",
+      "name": "대단하지!"
+    },
+    {
+      "id": "p_94a131fb-a11c-403e-8e7e-244c700ca415",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support1",
+      "name": "조금만 더 버텨!"
+    },
+    {
+      "id": "p_e43846ac-3f51-4447-8255-cc3a53592839",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support1",
+      "name": "내가 지켜줄게!"
+    },
+    {
+      "id": "p_dfd64df4-c15e-44ba-8b14-8b18d6f16366",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support2",
+      "name": "끝없는 분출•불식"
+    },
+    {
+      "id": "p_1adda868-c0f4-4f34-bf7f-1ba85ade3461",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support2",
+      "name": "끝없는 분출•신속"
+    },
+    {
+      "id": "p_183592f7-38ab-4a3a-9612-318fa8511b76",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support2",
+      "name": "내가 강화해 줄게!"
+    },
+    {
+      "id": "p_84686a17-7822-41f6-834a-1524774da08e",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support2",
+      "name": "가까이 오지마!"
+    },
+    {
+      "id": "p_eeb330ed-55d3-456e-8d1c-ab96baea0cfb",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support2",
+      "name": "이건 어때!"
+    },
+    {
+      "id": "p_d8f3996e-3978-4636-9a41-baadb3d01bf7",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "지름길의 행인"
+    },
+    {
+      "id": "p_f6ed960a-bc92-4488-9aa2-3de874ace6a1",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "반창고 수집가"
+    },
+    {
+      "id": "p_9babb863-2c7b-4243-8887-c90959d41e8f",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "마검 지배자"
+    },
+    {
+      "id": "p_4126cdce-0ca1-4cdb-af07-afec7f02c8d0",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "끝없는 파도"
+    },
+    {
+      "id": "p_90a1c2f5-c109-40fc-b41e-a5f1a54fe91d",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "속성 해방"
+    },
+    {
+      "id": "p_f30555e8-f384-4e26-9247-8737d5a133bb",
+      "character_id": "c_4b5166d9-62d1-4f93-88a0-fabe8565ae1c",
+      "style_type": "support_common",
+      "name": "마성의 침식"
+    },
+    {
+      "id": "p_eb813436-a8e1-4a89-85f1-ad6e5ef3ba1e",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main1",
+      "name": "벡터•고정"
+    },
+    {
+      "id": "p_eda015b6-68dd-4eb1-932d-ab877bea9c84",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main1",
+      "name": "벡터•파열"
+    },
+    {
+      "id": "p_84ba4179-6d99-499f-b19e-9cadccb9da74",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main1",
+      "name": "상황 분석"
+    },
+    {
+      "id": "p_dd5642f8-c517-488a-b8aa-b799e43933be",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main1",
+      "name": "액땜"
+    },
+    {
+      "id": "p_02b8ee9d-b553-48fd-9ddc-f538b9556bf9",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main1",
+      "name": "뜻밖의 이득"
+    },
+    {
+      "id": "p_ef90efcb-29ab-42dc-afc0-353a4869cf87",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main2",
+      "name": "벡터•유도"
+    },
+    {
+      "id": "p_1e1ba7a9-4c13-47d8-9f54-835e1ff8d818",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main2",
+      "name": "벡터•추락"
+    },
+    {
+      "id": "p_c3100da7-2c47-45d9-b889-9e49070e194a",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main2",
+      "name": "정확한 결산"
+    },
+    {
+      "id": "p_4b06490e-e293-48fd-9a5e-d21c072a87f1",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main2",
+      "name": "2차 동상"
+    },
+    {
+      "id": "p_d778ffbe-b969-4e6d-adee-c6bb992d5f95",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main2",
+      "name": "한낮의 추위"
+    },
+    {
+      "id": "p_f61ceb44-2759-4222-bf78-e475337724ed",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "낯선 이 접근 금지"
+    },
+    {
+      "id": "p_ad935e9a-4ff2-4b35-a1bd-3b7d1dd7385a",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "숙녀 본색"
+    },
+    {
+      "id": "p_ff9c157f-6213-475d-aeff-9ae95beeba33",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "난루의 축적"
+    },
+    {
+      "id": "p_a783c59f-0ecb-4d63-80cd-b9605a7c42d3",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "빙화의 창"
+    },
+    {
+      "id": "p_818eb220-e27b-48a9-a72d-d6bb1516d83f",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "눈폭풍의 행진"
+    },
+    {
+      "id": "p_82e0d028-6363-4677-8978-900cb87291a4",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "main_common",
+      "name": "빙결의 가호"
+    },
+    {
+      "id": "p_2fab98bc-ecb2-4cb5-aeea-a09641e9ee1b",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support1",
+      "name": "상수•확산"
+    },
+    {
+      "id": "p_21b30d91-b871-4350-8e6c-1943be5bd4ca",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support1",
+      "name": "상수•인력"
+    },
+    {
+      "id": "p_4a3261eb-cfe4-47e0-883f-9550b1f298ae",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support1",
+      "name": "강제 청산"
+    },
+    {
+      "id": "p_50fa932a-f605-46de-b85e-a7257a7088c0",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support1",
+      "name": "폭풍 눈보라"
+    },
+    {
+      "id": "p_65f52313-2fe7-44af-a10e-9bb4f6def8bc",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support1",
+      "name": "겨울의 연속"
+    },
+    {
+      "id": "p_19958cbf-d257-4cfc-964b-8de1c1375f5b",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support2",
+      "name": "상수•중첩"
+    },
+    {
+      "id": "p_b991f817-6b94-4976-a9ca-c3344e76b2a6",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support2",
+      "name": "상수•충격"
+    },
+    {
+      "id": "p_b78eecf0-d93f-41cf-a150-4e5e86b6b6c6",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support2",
+      "name": "부실 자산"
+    },
+    {
+      "id": "p_63be6e42-e508-4ddf-8140-c512818e7529",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support2",
+      "name": "일괄 판매"
+    },
+    {
+      "id": "p_09a86113-aa9a-42a0-8363-80d2013c4ce3",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support2",
+      "name": "혼란 속의 기회"
+    },
+    {
+      "id": "p_34473f4a-b051-4ab2-af9e-63947dee0ecc",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "긍정의 신호"
+    },
+    {
+      "id": "p_d75ae157-a74c-4fe2-8873-149d658664df",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "함수 증폭"
+    },
+    {
+      "id": "p_34398ba7-f547-44c1-a2fd-2db6221ab901",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "급격한 침수"
+    },
+    {
+      "id": "p_65514337-7fa0-406f-8f1a-1424731ddae0",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "빙화의 창"
+    },
+    {
+      "id": "p_e15ff799-095e-4180-94be-cbdef7985647",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "눈폭풍의 행진"
+    },
+    {
+      "id": "p_7ab801d2-db92-4380-b7c5-abaf2d99b1a1",
+      "character_id": "c_9b69f29f-f8b7-4d52-893b-bf1ec052eb0d",
+      "style_type": "support_common",
+      "name": "빙결의 가호"
+    },
+    {
+      "id": "p_c5641ad8-b2ab-47b5-a852-02cdf516971c",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main1",
+      "name": "얼음 안개의 장막"
+    },
+    {
+      "id": "p_14f9f91d-75b6-4edc-9623-4fd7c4075b68",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main1",
+      "name": "신속한 심판"
+    },
+    {
+      "id": "p_84fb206c-dbc6-474c-92ac-d7ed0e4eea43",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main1",
+      "name": "원소 승화"
+    },
+    {
+      "id": "p_20a9129e-53a7-427a-98c3-b531840ef3fa",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main1",
+      "name": "종말의 축복"
+    },
+    {
+      "id": "p_9b819e30-92d8-4ccf-b76d-7cfef0966b48",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main1",
+      "name": "영혼 추출"
+    },
+    {
+      "id": "p_a549398c-edda-43f3-a19c-c644bcf36581",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main2",
+      "name": "회오리 폭풍"
+    },
+    {
+      "id": "p_967b4454-4cdb-4857-81a1-9f77806eea76",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main2",
+      "name": "멈추지 않는 의지"
+    },
+    {
+      "id": "p_69a8bcf0-822e-4493-ad27-723e19a1b20b",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main2",
+      "name": "극한 망각"
+    },
+    {
+      "id": "p_9b8836eb-2f58-41d3-a62d-aa89954f4828",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main2",
+      "name": "얼음의 선물"
+    },
+    {
+      "id": "p_590ba872-0a7b-43f1-9290-000b9517cd9c",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main2",
+      "name": "서리 결계"
+    },
+    {
+      "id": "p_89c0c252-eacb-4614-876c-2228622188de",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "승리의 맹공"
+    },
+    {
+      "id": "p_b24e1e97-5b73-4ca1-93a2-f1f334b0faa1",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "정면 승부"
+    },
+    {
+      "id": "p_90cced05-6ddf-418c-af1a-826ee555a9c6",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "절체절명의 역전"
+    },
+    {
+      "id": "p_f7f20324-e77e-4376-ba85-2567a6649bbd",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "얼음의 소용돌이"
+    },
+    {
+      "id": "p_d5c69f7c-b665-43fe-81da-f3250cf9ef64",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "휘몰아치는 한기"
+    },
+    {
+      "id": "p_afc05d35-0dda-433b-a5c3-a9ed1187e24a",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "main_common",
+      "name": "서리의 참격"
+    },
+    {
+      "id": "p_e9024783-be94-4e5f-a47f-e569c2a55de2",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support1",
+      "name": "빙결 봉인"
+    },
+    {
+      "id": "p_afbf0d24-ec15-45ba-ac0b-5e597c129178",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support1",
+      "name": "혹한의 예고"
+    },
+    {
+      "id": "p_ba82924d-f5eb-4e08-a7d6-b7e7747a5c06",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support1",
+      "name": "뼈 시리는 추위"
+    },
+    {
+      "id": "p_e8119f3c-43af-4289-bbe2-1083d92fbefe",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support1",
+      "name": "혹한의 깨물기"
+    },
+    {
+      "id": "p_e81a2cf2-dba9-4dcc-b163-4fd0687a9ee8",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support1",
+      "name": "영도 폭발"
+    },
+    {
+      "id": "p_a7bdd48d-ff96-466c-9d29-368a6a8b2980",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support2",
+      "name": "부분 강설"
+    },
+    {
+      "id": "p_ce262f76-3c79-4ab9-beed-b34b408bfa8d",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support2",
+      "name": "서리의 경고"
+    },
+    {
+      "id": "p_f1c2cf12-69af-409f-a25e-b7e6670d93eb",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support2",
+      "name": "법의 바다"
+    },
+    {
+      "id": "p_78f98ccf-91db-4b0d-85e3-b2c320434dab",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support2",
+      "name": "구원의 힘"
+    },
+    {
+      "id": "p_0f7b3a81-0806-470e-ac48-e4bfcece1cc2",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support2",
+      "name": "신앙의 가호"
+    },
+    {
+      "id": "p_698f0b30-d40a-4ade-9ea3-6af4afe8dd46",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "시간 역행"
+    },
+    {
+      "id": "p_bd02d632-888a-4061-928b-30d18d24f61c",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "수호의 의지"
+    },
+    {
+      "id": "p_f53e1ddf-9eee-4aed-a848-de3da6091f15",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "침묵속의 기도"
+    },
+    {
+      "id": "p_e74023e4-fbd6-425d-8711-0c57fc6967b5",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "얼음의 소용돌이"
+    },
+    {
+      "id": "p_0e96072d-19c1-44bb-8288-e4bf7b0ebe2f",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "휘몰아치는 한기"
+    },
+    {
+      "id": "p_4163c5fb-ac2c-4b18-9bf4-dabc9b9cf6e8",
+      "character_id": "c_f216bea5-9f89-4816-8ef7-3d34144382a4",
+      "style_type": "support_common",
+      "name": "서리의 참격"
+    },
+    {
+      "id": "p_69e131fe-a335-4d56-804e-e04a9cc68706",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main1",
+      "name": "청류 순환"
+    },
+    {
+      "id": "p_a0da150f-5615-4599-a21e-73d7164bc374",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main1",
+      "name": "파도의 소용돌이"
+    },
+    {
+      "id": "p_ba73c01b-91d5-4904-bc57-fdb145d0f868",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main1",
+      "name": "파란만장"
+    },
+    {
+      "id": "p_6c8a0e0f-467f-4e11-99af-39a04ef2e666",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main1",
+      "name": "청류의 그림자"
+    },
+    {
+      "id": "p_f7cbaced-59b4-4088-aad7-090f016a83ac",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main1",
+      "name": "은빛 폭포"
+    },
+    {
+      "id": "p_50583e85-43a2-4831-a4c0-c159178d966b",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main2",
+      "name": "급류 하강"
+    },
+    {
+      "id": "p_1f329666-509d-457a-b127-023fc7a45828",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main2",
+      "name": "시냇물의 속삭임"
+    },
+    {
+      "id": "p_c32c2ae3-648a-476b-bbda-9239b3fbfb2a",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main2",
+      "name": "소나기 직후"
+    },
+    {
+      "id": "p_f6ab0578-22dd-447b-b991-2b03af86e1d6",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main2",
+      "name": "빗물의 파장"
+    },
+    {
+      "id": "p_450142b2-7a68-4169-a23a-d644de51ee3d",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main2",
+      "name": "침묵의 비"
+    },
+    {
+      "id": "p_bc59e205-6797-47d1-8ed5-44af084ef827",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "하천의 울림"
+    },
+    {
+      "id": "p_d3342096-1125-4c07-8fbe-eab1c5ad14fc",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "해일의 폭풍"
+    },
+    {
+      "id": "p_43455143-1ab4-462f-97e5-0f1d2dfaa45f",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "정화의 장대비"
+    },
+    {
+      "id": "p_db3cee42-7f48-4a7b-a9a2-f0a8fa36ae77",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "낭독"
+    },
+    {
+      "id": "p_bdcc5537-a160-443c-9f5d-a3ee7f4b2f92",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "파도"
+    },
+    {
+      "id": "p_6a76d563-2e15-4fdc-af9b-762a82f30b49",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "main_common",
+      "name": "산골짜기의 물소리"
+    },
+    {
+      "id": "p_dee8efa5-6cfc-4edb-b131-9e0cdd45a31c",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support1",
+      "name": "우기•비바람"
+    },
+    {
+      "id": "p_de26f9cf-3614-4f8c-9314-1c859a7c3d85",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support1",
+      "name": "우기•가랑비"
+    },
+    {
+      "id": "p_acf79021-18d5-4f63-8658-60813ccb6a82",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support1",
+      "name": "위험 제거"
+    },
+    {
+      "id": "p_beab1031-bec9-4dac-bb26-f2845ff5159c",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support1",
+      "name": "만반의 준비"
+    },
+    {
+      "id": "p_ce818672-8ff8-411d-a1cc-4af8662160fb",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support1",
+      "name": "소방 점검"
+    },
+    {
+      "id": "p_929b2017-550a-4649-89f4-58e7b8eb39f5",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support2",
+      "name": "우기•장맛비"
+    },
+    {
+      "id": "p_6a2cb16a-a775-4a22-8665-34a6e9811327",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support2",
+      "name": "우기•부슬비"
+    },
+    {
+      "id": "p_067cd8d4-39f8-4f6c-a947-1d7a78aa2f97",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support2",
+      "name": "비서의 업무"
+    },
+    {
+      "id": "p_fa25926f-e877-4d96-bf08-34c40c45ca53",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support2",
+      "name": "현장 분석"
+    },
+    {
+      "id": "p_d52f4f73-2558-48c9-b6d5-b6fbff5c6357",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support2",
+      "name": "문서 지원"
+    },
+    {
+      "id": "p_faa7a0b3-e854-4a7b-9a4e-926d79330ea9",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "수자원 전문가"
+    },
+    {
+      "id": "p_275bd508-dcec-44a2-9ecb-80bd27a7373f",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "효율 증가"
+    },
+    {
+      "id": "p_12860370-2a28-46e7-86c0-dd7089ebdbbe",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "순조로운 진행"
+    },
+    {
+      "id": "p_053e212f-1039-45e9-9a16-10d6839a40e9",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "낭독"
+    },
+    {
+      "id": "p_4354f761-b903-441b-9225-8fb29d5837c5",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "파도"
+    },
+    {
+      "id": "p_12886175-d9c6-49de-b6e0-5ee672bec9b0",
+      "character_id": "c_f830db57-83f9-4c3a-936c-2463eff6bfc2",
+      "style_type": "support_common",
+      "name": "산골짜기의 물소리"
+    },
+    {
+      "id": "p_450631c6-a1f0-44e0-8865-ee7eb10bfe03",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main1",
+      "name": "삭제 전의 저항"
+    },
+    {
+      "id": "p_583d4d6b-f876-4b48-88a3-3fe524d9f862",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main1",
+      "name": "연속 촬영"
+    },
+    {
+      "id": "p_83ea6874-1aa1-4d44-96b9-c6a463d28018",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main1",
+      "name": "저주의 울부짖음"
+    },
+    {
+      "id": "p_85dfd6a7-9ad2-425f-9cd4-069ea8c04ce7",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main1",
+      "name": "원념•악마의 시험"
+    },
+    {
+      "id": "p_e6ceca1d-dcd6-422d-a5a7-a9a4d2290215",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main1",
+      "name": "원념•강력 공격"
+    },
+    {
+      "id": "p_c65b6025-0071-401c-9607-6805bb4ff91f",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main2",
+      "name": "장노출"
+    },
+    {
+      "id": "p_1a7b1367-4949-4866-a0d4-6b0ef19ab6dd",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main2",
+      "name": "순간 포착"
+    },
+    {
+      "id": "p_0d4fb45e-0773-44bf-8901-8acb0834612f",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main2",
+      "name": "증오의 폭발"
+    },
+    {
+      "id": "p_e5e72cef-9ce0-4953-8f4e-632b5664fd63",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main2",
+      "name": "어둠 속 질주"
+    },
+    {
+      "id": "p_56d394b0-ae15-4cd8-b619-6dffd8cb4d43",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main2",
+      "name": "네거티브 노출 보정"
+    },
+    {
+      "id": "p_031ea8e1-792d-463a-94a5-9998af76f613",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "풀 프레임 자동 초점"
+    },
+    {
+      "id": "p_84f0deaa-6d04-44af-bbf2-35513da0d4b4",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "드러내는 욕망"
+    },
+    {
+      "id": "p_ec226b9a-8b2b-4e3e-8191-147b6ae78fb1",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "결정적 순간"
+    },
+    {
+      "id": "p_65860017-103b-4cf4-b90e-07662957d8a1",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "강력한 어둠의 탐식"
+    },
+    {
+      "id": "p_f6487fab-44d3-4a0e-b87d-ede3cba1ab79",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "어둠의 빠른 도래"
+    },
+    {
+      "id": "p_46d1c11a-c835-48ab-8ab3-9c267d7989d4",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "main_common",
+      "name": "광란의 혼돈"
+    },
+    {
+      "id": "p_e018b0aa-7923-42f9-9f2a-14d9cd97fad0",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support1",
+      "name": "기쁨의 미소"
+    },
+    {
+      "id": "p_a3bf4eb0-0a70-41c8-ba57-990611fd9995",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support1",
+      "name": "현실 침식"
+    },
+    {
+      "id": "p_5e837114-ad0f-4da0-a39f-ea5dc4db50f0",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support1",
+      "name": "초혼"
+    },
+    {
+      "id": "p_31ecec8b-3175-4eba-82ed-3676dd67f3b7",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support1",
+      "name": "흉령"
+    },
+    {
+      "id": "p_1ce527fa-a8e8-4613-a97f-9ac72d82cd6b",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support1",
+      "name": "쌍생"
+    },
+    {
+      "id": "p_ce10f47b-d1f6-41bb-baf3-16f32dd59105",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support2",
+      "name": "수면 유혹"
+    },
+    {
+      "id": "p_d77c0cb3-a8ca-4f3c-8700-0a49affd523f",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support2",
+      "name": "행운의 체질"
+    },
+    {
+      "id": "p_5ed7e00e-1cea-43b9-b82e-5b9a15ba8e4d",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support2",
+      "name": "악의"
+    },
+    {
+      "id": "p_62b57f24-db47-4151-8ab0-f18f1e298901",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support2",
+      "name": "그림자의 구속"
+    },
+    {
+      "id": "p_697c7a35-fc7f-429d-8796-8ccfbd5f045a",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support2",
+      "name": "긍정의 힘"
+    },
+    {
+      "id": "p_99a2a327-2c86-444a-8286-8794fa52a9b2",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "적외선 열화상"
+    },
+    {
+      "id": "p_841af84d-4794-4a12-8fa4-88b932b479a5",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "추가 복지"
+    },
+    {
+      "id": "p_30087b4c-dfd1-4033-ba52-f2ab9471ef10",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "배후 작업"
+    },
+    {
+      "id": "p_de23aa14-3484-406e-8433-5d19fcc7763f",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "강력한 어둠의 탐식"
+    },
+    {
+      "id": "p_f07a8f21-e389-4d85-bf7f-80e5f9b45a1e",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "어둠의 빠른 도래"
+    },
+    {
+      "id": "p_fa6e9bde-6c17-4195-9fa3-2ea9a947ccaf",
+      "character_id": "c_9fffe272-6298-44e3-b6d1-8d757f3c689c",
+      "style_type": "support_common",
+      "name": "광란의 혼돈"
+    },
+    {
+      "id": "p_aceab50f-14aa-4e16-b7d7-4bd7a2cbb9c8",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main1",
+      "name": "강음의 종결"
+    },
+    {
+      "id": "p_d140fd3c-de6e-4784-be6d-ec522c8b3f97",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main1",
+      "name": "환호의 섬광"
+    },
+    {
+      "id": "p_2cbe0eb2-050a-4326-8967-f4260dade04d",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main1",
+      "name": "변속 연주"
+    },
+    {
+      "id": "p_75e1c4f9-cfe2-4829-beea-9b97e43c00a7",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main1",
+      "name": "열기의 타이밍"
+    },
+    {
+      "id": "p_05fc43d0-f7cb-4389-944d-3c20621fb4d7",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main1",
+      "name": "크레센도"
+    },
+    {
+      "id": "p_f4b67145-a4b8-42da-9ab5-092a853aaf7f",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main2",
+      "name": "리듬 펄스"
+    },
+    {
+      "id": "p_1bbeed30-11ae-4dd9-8e69-7df0102bd5d2",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main2",
+      "name": "강음 확산"
+    },
+    {
+      "id": "p_7b70e040-046e-4d67-8226-473ff9012010",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main2",
+      "name": "타락 2중주"
+    },
+    {
+      "id": "p_c12cb8c8-ea20-4190-9df4-e1f35ea55d44",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main2",
+      "name": "볼륨 중첩"
+    },
+    {
+      "id": "p_54b87d24-07d8-4d5b-bffa-a8b73bb553ad",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main2",
+      "name": "귓가에 맴도는 선율"
+    },
+    {
+      "id": "p_e6232e14-634f-4bc9-a4d2-fcc03f790ef8",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "전체 버프"
+    },
+    {
+      "id": "p_9ee04765-f26e-4d59-beb4-dfc2cdad3522",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "반짝임의 춤"
+    },
+    {
+      "id": "p_72462a07-f322-48c6-82bf-e3221e7e382b",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "암멸의 음격"
+    },
+    {
+      "id": "p_82960bd6-e527-468e-b9ff-1fc3ec0d30d5",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "타락의 장막"
+    },
+    {
+      "id": "p_04dc13a1-f3b2-4b4a-a004-c5984ff32a13",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "악마의 쇼"
+    },
+    {
+      "id": "p_220a8be5-0b74-4e27-a132-490cee1d80b2",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "main_common",
+      "name": "비상의 현음"
+    },
+    {
+      "id": "p_ba4b2f21-1caf-4c31-8afb-c0fc92af17c6",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support1",
+      "name": "멜로디 회귀"
+    },
+    {
+      "id": "p_84066cba-1088-4355-b73a-1c6ea2f5f817",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support1",
+      "name": "하늘의 진동"
+    },
+    {
+      "id": "p_6ea6bbd6-d30c-4e6b-89c6-f02f51c7c70b",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support1",
+      "name": "저음의 이끌림"
+    },
+    {
+      "id": "p_fd2a52fa-f3dd-453a-8f9c-51b3bb28d00b",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support1",
+      "name": "선율의 물결"
+    },
+    {
+      "id": "p_4d49af7f-7976-4f60-93ad-a0974e5e4bb1",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support1",
+      "name": "뾰족한 예각"
+    },
+    {
+      "id": "p_441e874e-79ae-4ea7-a482-b29fcef1a13a",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support2",
+      "name": "가슴 떨리는 전도"
+    },
+    {
+      "id": "p_99324193-f88d-4820-aa7c-1191e069389f",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support2",
+      "name": "넘치는 열정"
+    },
+    {
+      "id": "p_167830b5-77b2-4035-93d5-56ae38b3bbea",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support2",
+      "name": "리듬의 울림"
+    },
+    {
+      "id": "p_d1983824-e951-4bae-9933-c245b37dcf1a",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support2",
+      "name": "영혼 직격타"
+    },
+    {
+      "id": "p_97f9961f-efb2-466b-b66e-97ccacca98ce",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support2",
+      "name": "하우스 공명"
+    },
+    {
+      "id": "p_edc9885c-d1a7-4425-8fca-20281e0edf23",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "어둠의 무도회"
+    },
+    {
+      "id": "p_41263ac1-48f6-42df-a6dd-d0324687ca75",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "암류 분출"
+    },
+    {
+      "id": "p_05bb07ef-4948-4d6d-8549-31561eda5963",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "악염의 잔해"
+    },
+    {
+      "id": "p_f034af51-d921-4b86-82f4-81235b79572e",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "타락의 장막"
+    },
+    {
+      "id": "p_9a32536b-eb69-493e-a2ab-b9f6561db072",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "악마의 쇼"
+    },
+    {
+      "id": "p_19928523-ca23-4359-ac22-e738a3694da2",
+      "character_id": "c_87264a63-2613-4d66-97e5-48ffb8f2d0ca",
+      "style_type": "support_common",
+      "name": "비상의 현음"
+    },
+    {
+      "id": "p_e181dca0-d806-4740-981c-323e725308f0",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main1",
+      "name": "어둠 낫의 무희"
+    },
+    {
+      "id": "p_83396062-9e06-4d6e-a6ee-b0f7ff014751",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main1",
+      "name": "혼을 찢는 본 쉐도우"
+    },
+    {
+      "id": "p_a425769a-3c4d-4005-a1c0-bd16a289f268",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main1",
+      "name": "어둠 속 질주"
+    },
+    {
+      "id": "p_89e4e591-4124-45f8-9783-c90c1579d990",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main1",
+      "name": "영혼의 구속"
+    },
+    {
+      "id": "p_aff5f7de-64cd-457c-8c0e-20b4f43e40a7",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main1",
+      "name": "영혼 그림자 결박"
+    },
+    {
+      "id": "p_2f6e9a52-add0-4a98-9b6f-3546e29a4cdf",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main2",
+      "name": "그림자 잠입"
+    },
+    {
+      "id": "p_97a9f7a5-c066-4218-a855-ad7fab64bd43",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main2",
+      "name": "환영의 그림자 칼날"
+    },
+    {
+      "id": "p_57577efd-4bf8-4fc0-a68c-383f20e5c522",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main2",
+      "name": "유혼의 숨결"
+    },
+    {
+      "id": "p_2a4d6729-dace-44f6-bee2-9859821e9a43",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main2",
+      "name": "어둠의 폭발"
+    },
+    {
+      "id": "p_178e098f-a4f6-4267-b31e-eebeaece4402",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main2",
+      "name": "암막의 잔상"
+    },
+    {
+      "id": "p_793163cf-ee8d-41d4-9c66-e6654b050b0d",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "비법의 칼날"
+    },
+    {
+      "id": "p_49f86249-f1e4-4fff-827e-53a3b410ac32",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "흔적 없는 그림자"
+    },
+    {
+      "id": "p_f0d642e7-d83a-46b9-8b96-3e664c1e8840",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "어둠 속 은신"
+    },
+    {
+      "id": "p_370e917c-598a-4f43-9e0a-e39e84df16ee",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "어둠의 낫 그림자"
+    },
+    {
+      "id": "p_9919a4a1-c6b3-4f77-a8bc-1cb9b0ea4800",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "삼라의 각인"
+    },
+    {
+      "id": "p_e1548e26-7757-4dd2-ab8d-b48069b7e761",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "main_common",
+      "name": "광란의 영혼 사냥"
+    },
+    {
+      "id": "p_eb4c405c-677b-44e8-a66c-2a63ad027d6b",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support1",
+      "name": "해골 조각"
+    },
+    {
+      "id": "p_0cc34ab7-22b4-44fc-8281-5b85f9e3529f",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support1",
+      "name": "파골난무"
+    },
+    {
+      "id": "p_74227350-0983-48d4-91b2-a2a44fb2d943",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support1",
+      "name": "영혼 컬렉션"
+    },
+    {
+      "id": "p_237eb4e2-3d0b-4555-8ae4-3d52a3219658",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support1",
+      "name": "피의 치유"
+    },
+    {
+      "id": "p_bc34e0f2-bb8b-4cc2-a207-1dee4e0f4989",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support1",
+      "name": "마법 이식"
+    },
+    {
+      "id": "p_263f4e13-1223-4e05-a55b-5fcdd4089bbf",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support2",
+      "name": "신비의 활성제"
+    },
+    {
+      "id": "p_2fb53d99-c6ca-4ee2-a1f2-a1f93f129ef3",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support2",
+      "name": "독소 침투"
+    },
+    {
+      "id": "p_e281e809-5007-4cbb-a4ec-b59e3292e2de",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support2",
+      "name": "묘기 수집"
+    },
+    {
+      "id": "p_3314c8d2-cf20-491c-ad5e-e8cfab83ca46",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support2",
+      "name": "영혼 봉인"
+    },
+    {
+      "id": "p_974e9eb0-1aba-45a6-9aff-1cae7260333c",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support2",
+      "name": "운명의 표식"
+    },
+    {
+      "id": "p_7c43ceae-c9f2-466f-9b68-1fbd832b221f",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "불법 의사"
+    },
+    {
+      "id": "p_c407d8e4-da85-418f-8ece-a89f6474de89",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "정밀 수술"
+    },
+    {
+      "id": "p_5f94d8f5-1e8a-4db6-a409-6a04be99111d",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "의학 연구"
+    },
+    {
+      "id": "p_ce383b8c-e6ff-4fc3-a2d0-4d0d4a0329af",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "어둠의 낫 그림자"
+    },
+    {
+      "id": "p_c54806b8-8023-4cee-8b47-ef908f013e32",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "삼라의 각인"
+    },
+    {
+      "id": "p_0d0bf26d-21b9-4233-b389-c2d22fd3a179",
+      "character_id": "c_4616c7de-6308-4c50-8b8c-79234d5d878c",
+      "style_type": "support_common",
+      "name": "광란의 영혼 사냥"
+    },
+    {
+      "id": "p_587f95dc-4385-4660-933a-0d1ad9e8c7bc",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main1",
+      "name": "어둠의 찢기"
+    },
+    {
+      "id": "p_4c9cdb8d-7c13-4d5b-92fe-fa30fc9d1321",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main1",
+      "name": "어둠의 흔적"
+    },
+    {
+      "id": "p_76117215-3f25-408c-a486-ea63d0d26fd2",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main1",
+      "name": "영혼의 어둠 발톱"
+    },
+    {
+      "id": "p_0722bc3c-9b61-4ed4-8173-82734cb6c951",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main1",
+      "name": "각인의 어둠 발톱"
+    },
+    {
+      "id": "p_14653f01-ac86-4244-aa5b-1884ba086a0c",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main1",
+      "name": "그림자의 어둠 발톱"
+    },
+    {
+      "id": "p_931b7829-1189-4213-9620-3160448c6e66",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main2",
+      "name": "저승의 손길"
+    },
+    {
+      "id": "p_75c71060-aa83-4021-9e3d-5a88f93073fa",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main2",
+      "name": "어둠의 낙인"
+    },
+    {
+      "id": "p_770b1eb7-f252-4f82-a543-4b73629a53d6",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main2",
+      "name": "어둠의 축복"
+    },
+    {
+      "id": "p_36657428-3dcc-4dd3-8264-e97bb7e7759d",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main2",
+      "name": "어둠의 침습"
+    },
+    {
+      "id": "p_8c773cf0-2ed3-4e76-bedd-f6a4a3ffaa05",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main2",
+      "name": "어둠의 그림자 폭풍"
+    },
+    {
+      "id": "p_309e71b0-c422-450e-a3d8-039bb5c83068",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "저승 속의 성흔"
+    },
+    {
+      "id": "p_2149d802-2dc2-43d4-8426-f7f0ede08f9e",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "그림자의 섬광"
+    },
+    {
+      "id": "p_7778df8e-0823-4e28-88c2-fcd2494fdd80",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "그림자의 동행"
+    },
+    {
+      "id": "p_943b43c2-1185-4d0c-a8ce-4fc60ea2660f",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "불타는 그림자"
+    },
+    {
+      "id": "p_e395e2a4-27df-49a8-bf1f-5d4e4a10f74c",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "어둠의 화염"
+    },
+    {
+      "id": "p_07ffa7df-47f4-4b24-92a4-74177c654d97",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "main_common",
+      "name": "어두은 잔상"
+    },
+    {
+      "id": "p_f303d5b2-4a94-4c77-87ca-fe9c71a4fb1a",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support1",
+      "name": "심연의 흔적"
+    },
+    {
+      "id": "p_d00aacdf-4ffc-4373-a700-50d13641be4b",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support1",
+      "name": "어둠의 낙인"
+    },
+    {
+      "id": "p_88c8ae7d-359f-4e5f-a00c-2d0d08d03151",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support1",
+      "name": "어둠•신기루"
+    },
+    {
+      "id": "p_5fb03126-f540-4c09-801b-a162307cbfaa",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support1",
+      "name": "어둠•마의 흔적"
+    },
+    {
+      "id": "p_9035768c-bfb4-40f9-9869-075c90d5383e",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support1",
+      "name": "어둠•생명"
+    },
+    {
+      "id": "p_0df9301b-ded8-48f3-b600-6fc8ee77eae1",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support2",
+      "name": "잔영 표식"
+    },
+    {
+      "id": "p_867b1084-707c-4dda-873d-a0c354718695",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support2",
+      "name": "잔영 각인"
+    },
+    {
+      "id": "p_3633df8a-0cae-4b36-9e5f-5fd23398c0eb",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support2",
+      "name": "어둠•환상"
+    },
+    {
+      "id": "p_5e1cd298-62f2-4feb-9ec9-35570fd9dede",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support2",
+      "name": "어둠•형상 파괴"
+    },
+    {
+      "id": "p_777c3bde-8df5-4f9c-bc5c-2482ad252afb",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support2",
+      "name": "어둠•여휘"
+    },
+    {
+      "id": "p_1f9c265a-da32-4fdc-aa9f-e3fba2674dea",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "어둠의 은총"
+    },
+    {
+      "id": "p_b590731a-eabb-4ab2-a5de-d43497782191",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "허공의 축복"
+    },
+    {
+      "id": "p_7463c948-eb5c-4c3b-b0c2-e5df97a9d2d7",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "그림자의 가호"
+    },
+    {
+      "id": "p_c637157d-0327-459e-812a-fcb15f362cda",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "불타는 그림자"
+    },
+    {
+      "id": "p_67d85fae-e969-4257-838f-582bde8d7a48",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "어둠의 화염"
+    },
+    {
+      "id": "p_7c4f83f9-dcc1-4cc6-b066-b166d7e14f18",
+      "character_id": "c_cd36141d-2baf-4dd4-b487-55388c946f8f",
+      "style_type": "support_common",
+      "name": "어두운 잔상"
+    },
+    {
+      "id": "p_83ab9900-e219-427f-a09a-1d1ebf10178b",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main1",
+      "name": "생명의 폭풍"
+    },
+    {
+      "id": "p_f470f84b-b1f3-47b2-9c9d-5e0625850de7",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main1",
+      "name": "부채꼴 꽃잎"
+    },
+    {
+      "id": "p_c068abc2-ed68-499a-b3e2-e9ddb32cac51",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main1",
+      "name": "질풍 노도"
+    },
+    {
+      "id": "p_18346686-b676-4429-9af7-b37f656ea1ea",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main1",
+      "name": "환영의 동행"
+    },
+    {
+      "id": "p_1f273faf-eea7-4208-a308-cd07063daf19",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main1",
+      "name": "빛을 향한 추격"
+    },
+    {
+      "id": "p_6daed2d1-c317-47a4-815e-a683b8f9aed8",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main2",
+      "name": "회전 칼날"
+    },
+    {
+      "id": "p_010b1e46-0a86-4197-85eb-5cb4ef130477",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main2",
+      "name": "풍요의 춤사위"
+    },
+    {
+      "id": "p_04a8d2c4-4fdc-49fc-b191-2b2a95667f7f",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main2",
+      "name": "흩날리는 꽃잎 폭풍"
+    },
+    {
+      "id": "p_5a0b0dfa-b0a0-4d11-890f-8a98c7327b09",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main2",
+      "name": "먼 곳에서의 기도"
+    },
+    {
+      "id": "p_34108706-0f3c-4380-a9ed-676b6f2f8c5a",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main2",
+      "name": "화려한 소용돌이"
+    },
+    {
+      "id": "p_c579afe6-c4d5-4453-9e86-1ae6b3c3be18",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "천공 돌파"
+    },
+    {
+      "id": "p_0323b14d-3307-41ef-ae13-bd32b9f664f2",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "만개하는 화려한 꽃"
+    },
+    {
+      "id": "p_7a43d504-fe3a-4da5-a41e-4fcb41539822",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "별빛의 질풍"
+    },
+    {
+      "id": "p_55856761-a1b4-4bbf-a28d-a86272ca6832",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "꽃 그림자의 시"
+    },
+    {
+      "id": "p_a5d6f85b-5590-4b4c-81b7-f78dc3d7ec9b",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "끝없는 그림자"
+    },
+    {
+      "id": "p_55bfcbe1-7e38-4e70-a263-932428ffe968",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "main_common",
+      "name": "그림자 바람의 노래"
+    },
+    {
+      "id": "p_ab1df7ba-55cd-4ae0-878d-595ed447315d",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support1",
+      "name": "재생의 양분"
+    },
+    {
+      "id": "p_8f8211c2-8ebd-47c1-8972-cdce794109a0",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support1",
+      "name": "따스한 바람의 포옹"
+    },
+    {
+      "id": "p_6ef666b8-98f3-4613-98e3-195f6ee055cc",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support1",
+      "name": "교대 수호"
+    },
+    {
+      "id": "p_b0f61d94-48d1-4e28-912f-a0bb7e384cc0",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support1",
+      "name": "섬세한 재배"
+    },
+    {
+      "id": "p_0b7ab4b3-77ce-494b-a4b4-6b6938ffc182",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support1",
+      "name": "결점 보완"
+    },
+    {
+      "id": "p_697a761b-67c0-46f2-9919-41c722f66147",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support2",
+      "name": "꽃무리의 시선"
+    },
+    {
+      "id": "p_3bfe67bf-541e-45d9-a842-ba16f2352396",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support2",
+      "name": "끝나지 않은 흥"
+    },
+    {
+      "id": "p_a4ec7342-3d68-4f5d-b6c9-5e0b56f4bda6",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support2",
+      "name": "마음을 다한 보살핌"
+    },
+    {
+      "id": "p_3d751eae-ee4f-44cd-a6fb-1004338dfa4b",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support2",
+      "name": "특별 보호"
+    },
+    {
+      "id": "p_12d12eca-1de7-4f7a-8c14-c76326a552f6",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support2",
+      "name": "정기 손질"
+    },
+    {
+      "id": "p_8425e721-d524-4de4-b719-209a58f96946",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "일심협력"
+    },
+    {
+      "id": "p_56a5c12f-fd25-4746-a2b5-d2c7c4a33678",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "0무용화산"
+    },
+    {
+      "id": "p_ce00f70c-43c5-424a-bd7a-00556734edcf",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "부드러운 함정"
+    },
+    {
+      "id": "p_d7ba7374-f038-4651-bbb4-0d849674bfe4",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "꽃 그림자의 시"
+    },
+    {
+      "id": "p_42896145-d22c-4401-95dc-3d4e39218fc1",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "끝없는 그림자"
+    },
+    {
+      "id": "p_6d4a50bf-7ee2-40be-9a6b-650eb3b9f049",
+      "character_id": "c_d65bdc58-8dbb-4cde-b458-c6765285a0fb",
+      "style_type": "support_common",
+      "name": "그림자 바람의 노래"
+    },
+    {
+      "id": "p_61cfb05e-96fc-40de-bd3f-f20e56d0b63d",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main1",
+      "name": "섬•이중주"
+    },
+    {
+      "id": "p_3cf57e3a-f8be-4f1e-8ff7-0e78ede0e6e7",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main1",
+      "name": "섬•그림자춤"
+    },
+    {
+      "id": "p_81541ba6-aa35-4186-b442-4b41f289305d",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main1",
+      "name": "질섬•삼연"
+    },
+    {
+      "id": "p_289c1b18-3f49-43fc-9570-ab017f4bd37b",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main1",
+      "name": "회오리 베기"
+    },
+    {
+      "id": "p_5f811e27-d75f-46ff-a3cc-e3841a9f162a",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main1",
+      "name": "폭풍 회전"
+    },
+    {
+      "id": "p_e02c22cb-25c4-4298-9670-e4afaa190c00",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main2",
+      "name": "섬•질풍"
+    },
+    {
+      "id": "p_7f63a452-2c45-477b-8017-12befff3ff4b",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main2",
+      "name": "섬•개운"
+    },
+    {
+      "id": "p_1d175803-a884-4b50-9ea4-1acdde68cd7b",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main2",
+      "name": "모래 폭풍"
+    },
+    {
+      "id": "p_bd1710c2-e8e4-43b5-8cbf-22f90407105c",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main2",
+      "name": "연무바람"
+    },
+    {
+      "id": "p_be85c8ae-230a-4b8f-a12b-8c2f67c46b99",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main2",
+      "name": "모래의 붕괴"
+    },
+    {
+      "id": "p_d9ecabd9-88ca-4b99-8671-7d3d8a560b4c",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "용자의 본능"
+    },
+    {
+      "id": "p_c2a9c448-9709-42b9-9be1-44a375ce7536",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "떨어지는 석양"
+    },
+    {
+      "id": "p_771794e5-69c7-45bf-a619-b35ea8613d14",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "검기의 위협"
+    },
+    {
+      "id": "p_383af08d-c5e0-4d6f-8d2b-84ad0cacf334",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "열공파무참"
+    },
+    {
+      "id": "p_81c47952-edbb-4108-88cc-ba33bf6d8ddc",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "열공신인참"
+    },
+    {
+      "id": "p_79f9317e-8746-4cae-9330-87792f6dd288",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "main_common",
+      "name": "열공연무참"
+    },
+    {
+      "id": "p_bc56b025-fe0d-4123-b2e7-5732c662ad45",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support1",
+      "name": "질주•돌풍"
+    },
+    {
+      "id": "p_44e63e28-ff1b-4002-b2ea-9d7e28170763",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support1",
+      "name": "질주•강풍"
+    },
+    {
+      "id": "p_73cdd046-d0e4-46a8-afa4-13f1da3824c1",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support1",
+      "name": "폭풍의 분열"
+    },
+    {
+      "id": "p_7a39406a-fa1e-4bd9-be6f-5f484e82c789",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support1",
+      "name": "칼날의 회오리"
+    },
+    {
+      "id": "p_dee79012-a884-4ef7-82f0-06339d3f95e1",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support1",
+      "name": "역풍의 보호막"
+    },
+    {
+      "id": "p_6328448a-e93e-46f7-8367-97e8a99a4977",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support2",
+      "name": "질주•풍도"
+    },
+    {
+      "id": "p_671426d4-90a4-4ccb-83f4-87cebf5b3a3d",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support2",
+      "name": "질주•폭풍"
+    },
+    {
+      "id": "p_87bf6688-0b99-4a77-9301-604b7ebf3bec",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support2",
+      "name": "질풍연무"
+    },
+    {
+      "id": "p_2f82b9ec-2c76-427f-a353-de4afcc6d168",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support2",
+      "name": "바람의 집결"
+    },
+    {
+      "id": "p_3eefd4fd-8b72-400b-86c2-9e53d78a4cac",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support2",
+      "name": "폭풍의 강탈"
+    },
+    {
+      "id": "p_be2532e9-cc04-4b21-9983-dd76fd959658",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "에너지 환류"
+    },
+    {
+      "id": "p_364819ee-2e7d-4625-8301-0f8487b6f2d5",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "날 선 회오리"
+    },
+    {
+      "id": "p_599ca3fd-9ed8-4745-962e-6fb2362f7f4b",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "무력화의 환류"
+    },
+    {
+      "id": "p_9eeb6b00-b435-47a8-9481-78e6b3559783",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "열공파무참"
+    },
+    {
+      "id": "p_16f457b1-08d6-4eed-afef-c32034ca3e5d",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "열공신인참"
+    },
+    {
+      "id": "p_9e9c5b42-8c64-4d03-9b43-66ba3a30e4e1",
+      "character_id": "c_51df4a90-ae73-4f44-aa3d-3010b0a1290a",
+      "style_type": "support_common",
+      "name": "열공연무참"
+    },
+    {
+      "id": "p_055b833e-3639-46a7-b2d9-a217fa880335",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main1",
+      "name": "별빛의 가호"
+    },
+    {
+      "id": "p_752da941-99ad-440a-897d-0cec14098383",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main1",
+      "name": "회전 질주"
+    },
+    {
+      "id": "p_5b6c9737-c067-4234-b503-10402c6c9691",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main1",
+      "name": "전 과목 긍정적 평가"
+    },
+    {
+      "id": "p_4eb1e516-bbd1-497a-b77d-9a176401c2f8",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main1",
+      "name": "단일 과목 학습 강화"
+    },
+    {
+      "id": "p_0cd3ebe1-a49f-48ab-950d-0eea59a74bd7",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main1",
+      "name": "우세 영역 활용"
+    },
+    {
+      "id": "p_e2ac6f49-ba3e-4009-8270-eca83dea97a7",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main2",
+      "name": "변화무쌍"
+    },
+    {
+      "id": "p_23c26387-91ec-4cd8-afda-49e1c3002a7b",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main2",
+      "name": "정방향 적분"
+    },
+    {
+      "id": "p_09612ae0-42d2-4ec1-adc1-fe9990741c2b",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main2",
+      "name": "지혜로운 조언자"
+    },
+    {
+      "id": "p_32b8cbf7-8000-45f7-b756-62ca62e0a62a",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main2",
+      "name": "고유의 가르침"
+    },
+    {
+      "id": "p_5c2d3b8c-5080-41e5-85ef-a9f6ecdf2019",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main2",
+      "name": "반격 교습"
+    },
+    {
+      "id": "p_0e5e79ed-e7a5-414a-ad6b-c0e8e901336a",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "홀로 빛나는 별"
+    },
+    {
+      "id": "p_22aaa203-7f42-495e-8cb6-5ca2e8593c0c",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "약점 분석"
+    },
+    {
+      "id": "p_27279fb7-cb4a-4209-a4ac-40a09778dc83",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "에메랄드 쉐도우 스텝"
+    },
+    {
+      "id": "p_cc7025a2-1599-4c6b-a054-365648eeb0b0",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "폭풍 제압"
+    },
+    {
+      "id": "p_3e0ae59e-3ad7-450d-99dd-42089033c321",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "구조 파괴"
+    },
+    {
+      "id": "p_11bf550a-9de5-4d9b-b81a-76727cf3052c",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "main_common",
+      "name": "순풍 영역"
+    },
+    {
+      "id": "p_c2ecb911-0194-403b-ba31-3ec4b34f268a",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support1",
+      "name": "효율적 연구 전수"
+    },
+    {
+      "id": "p_ffc03072-9b4c-4f9a-9ce5-83d3a2a47d13",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support1",
+      "name": "질적 변화 결론 전수"
+    },
+    {
+      "id": "p_a59e3fdc-91aa-4c1b-b10f-d17faa39b7dd",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support1",
+      "name": "결론 정밀 분석"
+    },
+    {
+      "id": "p_85eabf94-f261-4ed9-ada8-6003de75b7c8",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support1",
+      "name": "구조 분석"
+    },
+    {
+      "id": "p_4be91603-4993-4cd4-9ac4-38086d2f9917",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support1",
+      "name": "난제 공략"
+    },
+    {
+      "id": "p_29382508-84bb-4435-93fc-d5986f63ad98",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support2",
+      "name": "가속 개념 전수"
+    },
+    {
+      "id": "p_cb198921-93ef-40bb-ac7a-0031eeef58c1",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support2",
+      "name": "피어남의 미학 전수"
+    },
+    {
+      "id": "p_c689dceb-45d3-4d35-8dc2-49e2a26a84fb",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support2",
+      "name": "선풍 가속"
+    },
+    {
+      "id": "p_ab721944-969c-4c02-84ff-7a99f1209ab8",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support2",
+      "name": "고압 에너지 역류"
+    },
+    {
+      "id": "p_24a51ad5-d2cf-46cd-b2ea-1d4fceddc3cf",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support2",
+      "name": "바람의 눈 확장"
+    },
+    {
+      "id": "p_b92b8741-b60c-43b2-bcc0-fe6902613145",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "추리의 결론"
+    },
+    {
+      "id": "p_6b7ca044-523d-4a04-997d-61d654d0f82a",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "내면의 생각"
+    },
+    {
+      "id": "p_5dc6eb5d-9164-406b-a242-a695e7e2a4ae",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "나의 존재"
+    },
+    {
+      "id": "p_e63b47a3-66b7-4d0a-8e75-e4bbe75db1f4",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "폭풍 제압"
+    },
+    {
+      "id": "p_47e2f743-cbc3-47ec-937b-d306a98ffb6e",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "구조 파괴"
+    },
+    {
+      "id": "p_6ba71384-09dd-4aea-9e33-e2349631af93",
+      "character_id": "c_bde58e21-1423-4bda-aec0-f0dfbe75db30",
+      "style_type": "support_common",
+      "name": "순풍 영역"
+    },
+    {
+      "id": "p_d2b27151-87d0-492c-9bab-ae24a5f68813",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main1",
+      "name": "바람의 숨결"
+    },
+    {
+      "id": "p_be7f2b6d-166d-4b86-a57f-4fee1be61cb1",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main1",
+      "name": "흩날리는 돌먼지"
+    },
+    {
+      "id": "p_f38078ea-5f9d-408e-886d-361cedd7617d",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main1",
+      "name": "바람의 따르는 용기"
+    },
+    {
+      "id": "p_938cbcce-5beb-4609-a49c-24d06f4d97ff",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main1",
+      "name": "승리의 맹공"
+    },
+    {
+      "id": "p_e7cefb4b-b298-4c83-9c6a-90c35e18eee4",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main1",
+      "name": "흔들리는 풍경종"
+    },
+    {
+      "id": "p_9a7e2f9b-ae15-4ae1-8bbb-ff244ee6edbd",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main2",
+      "name": "빛의 소용돌이"
+    },
+    {
+      "id": "p_9d374a47-0773-4041-afc1-cff66e4850aa",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main2",
+      "name": "화려한 등장"
+    },
+    {
+      "id": "p_b21f69c5-931c-49da-a995-346c6c878d0e",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main2",
+      "name": "바람을 거스르는 기세"
+    },
+    {
+      "id": "p_70cee06e-c2f8-499d-8eb9-9d9c3915a397",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main2",
+      "name": "부드러운 바람"
+    },
+    {
+      "id": "p_858b9b0a-1041-4513-8ec3-39666be58b1c",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main2",
+      "name": "바람을 타는 소용돌이"
+    },
+    {
+      "id": "p_5a16fff9-c8b3-42fc-a928-3c2a0382cc54",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "눈에 띄는 존재"
+    },
+    {
+      "id": "p_83d0c25c-bb92-493d-bac2-73a3a5b864a0",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "바람의 길"
+    },
+    {
+      "id": "p_076eefc8-44b0-4cd9-a6b0-dd2a4be2c684",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "바람의 경쾌한 발길"
+    },
+    {
+      "id": "p_34181ee5-742e-405e-a461-110f84b636a5",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "보스의 표효"
+    },
+    {
+      "id": "p_12529a5b-9b7c-4aec-8e40-a40d1b7af27b",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "산맥의 흡입"
+    },
+    {
+      "id": "p_3d12e768-b87b-4532-be75-2d140ff1432d",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "main_common",
+      "name": "에너지 탐식"
+    },
+    {
+      "id": "p_6c66422e-e4b3-4156-92ec-b96e748e55eb",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support1",
+      "name": "견고한 바람 방벽"
+    },
+    {
+      "id": "p_d28210ef-51a4-40df-bacb-8850463ccc02",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support1",
+      "name": "따스한 바람의 가호"
+    },
+    {
+      "id": "p_a271074f-a154-4102-abae-02eec1c8cef4",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support1",
+      "name": "바람 장벽"
+    },
+    {
+      "id": "p_26cb22a5-a417-45a8-b4aa-4fd79227beeb",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support1",
+      "name": "강풍의 결박"
+    },
+    {
+      "id": "p_b1db8e5c-88dd-458b-8f78-8bc0398a2533",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support1",
+      "name": "가속 강화"
+    },
+    {
+      "id": "p_811dd427-9980-4027-9622-5906a0afd751",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support2",
+      "name": "역풍의 억제"
+    },
+    {
+      "id": "p_a9197c35-1d99-4601-968a-b15649f5da9d",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support2",
+      "name": "순풍의 항해"
+    },
+    {
+      "id": "p_0c5ee905-01fc-4af2-a108-40565fa94647",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support2",
+      "name": "파멸의 질풍"
+    },
+    {
+      "id": "p_ce8829c9-0b8e-4434-9655-b249578dff6e",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support2",
+      "name": "혼란스러운 흐름"
+    },
+    {
+      "id": "p_4a551242-22dd-4117-ba1a-548d95b9c1f3",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support2",
+      "name": "가속 돌파"
+    },
+    {
+      "id": "p_75b80c6d-1d02-44f0-9717-3b5a198bae89",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "숲속 공주의 은총"
+    },
+    {
+      "id": "p_0f4b0cf8-80e1-40c4-9408-267cde9e9a22",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "폭풍 격퇴"
+    },
+    {
+      "id": "p_e4e87113-cd12-421d-b13c-41373e5779b2",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "조력의 급류"
+    },
+    {
+      "id": "p_a2f34e17-843a-4be8-ba4f-02efb93b366d",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "보스의 포효"
+    },
+    {
+      "id": "p_ba5d2a5b-4a35-46ec-b14e-5c9eb4f3aff6",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "산맥의 흡입"
+    },
+    {
+      "id": "p_6e66fc74-049c-47d5-ba03-94fafc1763fe",
+      "character_id": "c_fa8a932e-dc75-4466-b1f8-cd944bb0f7bf",
+      "style_type": "support_common",
+      "name": "에너지 탐식"
+    },
+    {
+      "id": "p_f0d8a22a-4da6-4b38-977b-794fdb576557",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main1",
+      "name": "무성한 가지"
+    },
+    {
+      "id": "p_0500f2c6-9ff8-4f44-8f3c-5e811a0596f0",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main1",
+      "name": "사방이 적군"
+    },
+    {
+      "id": "p_b464a445-cae8-4844-9722-ce5ccd59deac",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main1",
+      "name": "쌍둥이 새싹"
+    },
+    {
+      "id": "p_04e0d06f-e4c4-4a4f-a143-04ebb85c9d80",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main1",
+      "name": "증식하는 가지"
+    },
+    {
+      "id": "p_c180b537-4550-4dbc-9bde-a970aaa078b3",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main1",
+      "name": "얽혀 있는 뿌리"
+    },
+    {
+      "id": "p_efc03ef3-e32a-451f-96f2-4e16cc6a0e1f",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main2",
+      "name": "뿌린 대로 거두기"
+    },
+    {
+      "id": "p_0e9f32c6-8273-4f72-bf59-b4874ce1ae84",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main2",
+      "name": "가지의 가지"
+    },
+    {
+      "id": "p_a944dbbc-2b54-4d56-9a10-a8df205cca78",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main2",
+      "name": "야성적인 성장"
+    },
+    {
+      "id": "p_0dfdfc51-8ee3-4ebc-9240-c02a214ad452",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main2",
+      "name": "씨앗의 팽창"
+    },
+    {
+      "id": "p_8b3fb53c-5e5f-4251-a6d1-d0602b42ef6a",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main2",
+      "name": "단단한 열매"
+    },
+    {
+      "id": "p_eda8f5d6-1bba-43cb-a94e-e85a79d61d82",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "넘치는 생기"
+    },
+    {
+      "id": "p_d2be3d9f-8187-4b30-84c6-9b11115f163d",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "슬라이딩 승급"
+    },
+    {
+      "id": "p_053ae5c8-142a-4232-9250-d4e3419175de",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "잘 익은 열매"
+    },
+    {
+      "id": "p_343caa8a-e3cd-4dc0-90c5-28d47e892d6f",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "꽃과 열매"
+    },
+    {
+      "id": "p_e6ba818a-5038-47fb-8883-a616f22a8d57",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "완연한 봄"
+    },
+    {
+      "id": "p_b60e8c77-0c7c-4208-a8c7-3de66d02164c",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "main_common",
+      "name": "봄과 가을"
+    },
+    {
+      "id": "p_25556fae-61d1-4e5e-9fe8-0e152d9ec8ea",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support1",
+      "name": "두 번째 만개"
+    },
+    {
+      "id": "p_7767a711-b49d-4b42-924b-89795e147581",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support1",
+      "name": "바람에 흔들리는 풀잎"
+    },
+    {
+      "id": "p_b9f97230-4749-48cd-8939-d359b537d5ac",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support1",
+      "name": "꽃잎의 춤사위"
+    },
+    {
+      "id": "p_295c6968-da3e-48eb-8bb9-f2c48b797cfe",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support1",
+      "name": "가시 씨앗"
+    },
+    {
+      "id": "p_86bd5dc7-55ac-48bb-a646-bc68e75454ba",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support1",
+      "name": "부식의 속박"
+    },
+    {
+      "id": "p_681af5b7-2957-4c62-9615-b4aeb9783184",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support2",
+      "name": "조급한 성장"
+    },
+    {
+      "id": "p_a436b8e0-5f78-42ce-9219-04bd0e1f2c44",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support2",
+      "name": "꽃가지 접목"
+    },
+    {
+      "id": "p_4a76dd9b-3946-4a4b-bb48-7cc33ecc5fe4",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support2",
+      "name": "폭열 열매"
+    },
+    {
+      "id": "p_ecca505c-4fff-49b7-b05d-b2683fe758ff",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support2",
+      "name": "강인한 뿌리와 줄기"
+    },
+    {
+      "id": "p_5673748e-6b84-4796-886b-b183fa2a25de",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support2",
+      "name": "퍼져나가는 뿌리"
+    },
+    {
+      "id": "p_0540f0ce-ddf5-44ac-9b97-470200b4324a",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "티끌 모아 태산"
+    },
+    {
+      "id": "p_56b50c00-c7f2-4a26-a3c0-96420bfac3e7",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "의심의 씨앗"
+    },
+    {
+      "id": "p_3dade944-64a1-4c43-a606-7699e0a62fda",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "국면 전환"
+    },
+    {
+      "id": "p_4d0fc609-1ca2-449e-8e2e-7d205001e5de",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "꽃과 열매"
+    },
+    {
+      "id": "p_5cf969a9-380c-4ae6-b982-4838d57cfef3",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "완연한 봄"
+    },
+    {
+      "id": "p_2ee9f31a-5e88-4cbc-8433-9a75e8017914",
+      "character_id": "c_b5545176-fc57-48ea-802b-0b762bd869aa",
+      "style_type": "support_common",
+      "name": "봄과 가을"
+    },
+    {
+      "id": "p_4bb51153-003a-4ea2-9981-31093f2b994a",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main1",
+      "name": "미약한 세력"
+    },
+    {
+      "id": "p_5e162b2e-c863-4924-9bc1-f1934c858603",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main1",
+      "name": "살랑이는 스텝"
+    },
+    {
+      "id": "p_38e7ee02-14b8-4ed1-8e08-b2381a7bfbe1",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main1",
+      "name": "서프라이즈 포옹"
+    },
+    {
+      "id": "p_7e30989c-c1a1-4937-9fee-4c32962c09fb",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main1",
+      "name": "사랑스러운 응원"
+    },
+    {
+      "id": "p_ade0c631-7f4a-4674-a9bf-10b536b7f5e8",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main1",
+      "name": "리듬의 달인"
+    },
+    {
+      "id": "p_5cf6c63b-3cf6-45e7-b2ba-04c9a28ebb1c",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main2",
+      "name": "행운 추첨"
+    },
+    {
+      "id": "p_513dbae5-0c72-4e49-ab8c-9e6c41a3364d",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main2",
+      "name": "화려한 턴"
+    },
+    {
+      "id": "p_0eaf0695-841e-4c61-843d-702bacc34ffa",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main2",
+      "name": "원샷 올킬"
+    },
+    {
+      "id": "p_a4c098d2-9526-4a9e-9e36-8152aed9c519",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main2",
+      "name": "빈틈 채우기"
+    },
+    {
+      "id": "p_fd48693e-5bb9-4dbb-96e5-48173aced600",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main2",
+      "name": "협력 화력"
+    },
+    {
+      "id": "p_ca41e98f-5bfc-4dd3-8382-4df809095e1f",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "자연의 손길"
+    },
+    {
+      "id": "p_b1c36388-a288-48b3-8437-251a4f601ae8",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "스텝 기술"
+    },
+    {
+      "id": "p_31b9f965-698e-40af-b69f-3e51c96b8573",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "기발한 장난"
+    },
+    {
+      "id": "p_b58e6bb8-844a-4eb1-9cbd-adbb58bd5f18",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "개구쟁이 총집합"
+    },
+    {
+      "id": "p_80785c6a-d4e3-4329-ab59-7f2155e1fdda",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "풍선 토네이도"
+    },
+    {
+      "id": "p_82034f78-6258-4145-8b08-2f7ec54e4b15",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "main_common",
+      "name": "터보 카트"
+    },
+    {
+      "id": "p_90e9eafe-0eaf-421a-a3e7-8a08688dd334",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support1",
+      "name": "정의로운 기세"
+    },
+    {
+      "id": "p_574d30cc-673e-47d6-ac59-e0e799c8289b",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support1",
+      "name": "무한한 스윙"
+    },
+    {
+      "id": "p_bd1b2a62-28fc-45f1-b38c-d0f4de09cc6c",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support1",
+      "name": "기쁨의 스핀"
+    },
+    {
+      "id": "p_9fe5e7ca-1528-4a09-93ff-48ffd7aeb39e",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support1",
+      "name": "깃털의 난무"
+    },
+    {
+      "id": "p_7d593425-941f-409a-981d-0bd59a8580be",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support1",
+      "name": "큐티 스타볼"
+    },
+    {
+      "id": "p_39c4345c-4d9e-474a-8e72-0b557f1435c9",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support2",
+      "name": "특별한 러브샷"
+    },
+    {
+      "id": "p_bfd512f6-b360-4cce-9d10-a1bf7bb5a8c4",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support2",
+      "name": "피어나는 달콤함"
+    },
+    {
+      "id": "p_67834dc9-3893-4cd7-a0d4-98f46b7371bd",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support2",
+      "name": "러브 애로우"
+    },
+    {
+      "id": "p_aa490932-cf36-44d5-8079-b90b73cb3814",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support2",
+      "name": "사랑의 관통"
+    },
+    {
+      "id": "p_7a67a487-2b6e-4d1e-aa12-07128508163c",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support2",
+      "name": "허니 애로우"
+    },
+    {
+      "id": "p_df7948d8-f4ef-4044-b9b7-f5f2f0bf8971",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "하늘에서 떨어진 행운"
+    },
+    {
+      "id": "p_3e9eb7c6-eb66-401f-b46c-ac6a355b9a57",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "보너스 풀"
+    },
+    {
+      "id": "p_52c63a1b-5155-4977-956b-4ca2cdcbed9b",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "연속 서프라이즈"
+    },
+    {
+      "id": "p_997028a1-4993-400b-9b99-8dd9b995e032",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "개구쟁이 총집합"
+    },
+    {
+      "id": "p_dfbe366d-2175-4c76-b284-6fca874faa4c",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "풍선 토네이도"
+    },
+    {
+      "id": "p_697dd99f-9c14-49a9-8455-f7208c502161",
+      "character_id": "c_b3dd61dd-fc75-449c-84e3-2e5646790fd8",
+      "style_type": "support_common",
+      "name": "터보 카트"
+    },
+    {
+      "id": "p_fff1190b-0e7f-4dd3-880f-1e2b59eb0b03",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main1",
+      "name": "통제 불가 폭주"
+    },
+    {
+      "id": "p_5a04e2c0-5dcf-4cb2-9e65-bf932b7e4c41",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main1",
+      "name": "산사태 폭풍"
+    },
+    {
+      "id": "p_3815500f-4f34-4be5-83b7-7f0244baca41",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main1",
+      "name": "아쉬운 마음"
+    },
+    {
+      "id": "p_214efe7b-2acf-4c42-924d-d05cb2fafae7",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main1",
+      "name": "가학적 즐거움"
+    },
+    {
+      "id": "p_6ed27226-c331-4569-bf04-56f042cafd1f",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main1",
+      "name": "안전장치 없음"
+    },
+    {
+      "id": "p_03d5c644-7a45-4359-b047-8035457e3d4d",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main2",
+      "name": "고통 증식"
+    },
+    {
+      "id": "p_d7038ef4-7f17-4bed-b352-20701c2e1e94",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main2",
+      "name": "끝없는 고통"
+    },
+    {
+      "id": "p_b12edd2d-fbbe-4041-bd7e-d91bbaed99e9",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main2",
+      "name": "관통의 고통"
+    },
+    {
+      "id": "p_ded46103-2244-48ac-ae4e-9a8401690ef1",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main2",
+      "name": "악의적 공격"
+    },
+    {
+      "id": "p_831a46c0-e261-49a1-b431-ce9ab77f96a6",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main2",
+      "name": "멀티 플레이"
+    },
+    {
+      "id": "p_d4c0565f-bd11-4ab8-8bff-b0091519f46f",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "공감"
+    },
+    {
+      "id": "p_ba33d78f-c8ef-4933-9b24-6b6180a3bbe5",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "사적 제재"
+    },
+    {
+      "id": "p_642c352b-6db3-4726-a5da-4d71db494585",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "추격 사냥"
+    },
+    {
+      "id": "p_390b48a6-9283-4668-8288-5edc1b586735",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "연익자의 종결 선언"
+    },
+    {
+      "id": "p_70ebcb98-bec9-4d33-90d1-f66d6bb3c303",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "사면자의 비전 선언"
+    },
+    {
+      "id": "p_a44ff96a-7416-45da-9e0e-0f741144c7fd",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "main_common",
+      "name": "윤회자의 심판 선언"
+    },
+    {
+      "id": "p_fafde141-5ce1-46af-8a0c-a8a28f6d360d",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support1",
+      "name": "가중처벌"
+    },
+    {
+      "id": "p_7c6c7597-0221-4195-aa57-bc827b1316a1",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support1",
+      "name": "훌륭한 마무리"
+    },
+    {
+      "id": "p_bb2fb438-a3b8-4f04-8f9a-f9067a917557",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support1",
+      "name": "여섯 재앙•순교"
+    },
+    {
+      "id": "p_9ca9a6b4-1142-4b7c-8f29-252bf7775c40",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support1",
+      "name": "여섯 재앙•죽음의 한"
+    },
+    {
+      "id": "p_82a013b4-8c90-472b-b116-fc4733769e03",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support1",
+      "name": "여섯 재앙•정복"
+    },
+    {
+      "id": "p_3a28c853-7b5d-4afb-b1da-7374716c3b1c",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support2",
+      "name": "죄의 공진"
+    },
+    {
+      "id": "p_e98dc23e-5f02-4524-b6ae-03041086189a",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support2",
+      "name": "진동하는 대지"
+    },
+    {
+      "id": "p_95da7102-9a85-4f85-ad1f-50e2342239a3",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support2",
+      "name": "여섯 재앙•굶주림"
+    },
+    {
+      "id": "p_62d62e7a-c836-439f-8d7d-bcde45ec1275",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support2",
+      "name": "여섯 재앙•침식"
+    },
+    {
+      "id": "p_cd1bcccc-ff70-4eac-a1bc-0ed818bc0ed9",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support2",
+      "name": "여섯 재앙•사망"
+    },
+    {
+      "id": "p_44be3bdc-dd30-492d-9f02-66d948c642c2",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "영혼 실의 공명"
+    },
+    {
+      "id": "p_3f8fee76-52f4-4189-b4b9-0684368a772a",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "환혼의 단죄"
+    },
+    {
+      "id": "p_a478b780-84a0-49c6-889c-0e36007ce703",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "황혼의 사냥"
+    },
+    {
+      "id": "p_c8153d0e-dea8-44d4-b7eb-9ed4e9344bab",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "연익자의 종결 선언"
+    },
+    {
+      "id": "p_8a823c25-fdc0-4cb7-868a-566690faade9",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "사면자의 비전 선언"
+    },
+    {
+      "id": "p_ebccffb5-f31d-420c-9884-3802d586164d",
+      "character_id": "c_8d7dd931-f09c-47b3-b58c-3abec68890c2",
+      "style_type": "support_common",
+      "name": "윤회자의 심판 선언"
+    },
+    {
+      "id": "p_6e3309ad-2d9c-47d8-8ee7-874915995c91",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main1",
+      "name": "불꽃의 각성"
+    },
+    {
+      "id": "p_fc2fc856-c5e4-4e49-b166-10a5735b9889",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main1",
+      "name": "별빛의 불꽃"
+    },
+    {
+      "id": "p_6fba4e03-b516-4fd5-9fa2-4e963c1c094c",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main1",
+      "name": "불꽃 연못의 잔재"
+    },
+    {
+      "id": "p_61fb0732-8927-4803-b5e8-0c282f4546b3",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main1",
+      "name": "열독의 각인"
+    },
+    {
+      "id": "p_b822b476-1be6-451c-be41-1d0b2e10b821",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main1",
+      "name": "화염 공명"
+    },
+    {
+      "id": "p_4e9094ba-e5b0-4325-90b4-3fa45b48143b",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main2",
+      "name": "먹에 스며든 불꽃"
+    },
+    {
+      "id": "p_e9b51b46-c45d-48b9-86d3-c4041a65066c",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main2",
+      "name": "무지개 화염진"
+    },
+    {
+      "id": "p_9f26d728-aa1d-46d6-9e0d-047a3e8df009",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main2",
+      "name": "불의 먹점"
+    },
+    {
+      "id": "p_ad0f8621-506f-45c6-a800-2d5e409e7dac",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main2",
+      "name": "거센 불길의 표식"
+    },
+    {
+      "id": "p_50e1546e-d5c2-42b6-9cc3-cd6410931832",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main2",
+      "name": "화염 장막의 잔해"
+    },
+    {
+      "id": "p_c7f9ca7c-4c81-4f82-bda8-6529f92fb16b",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "먹의 색채"
+    },
+    {
+      "id": "p_119e3724-4ef6-4cc0-92b0-7a296f45b62e",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "붓 끝의 연소"
+    },
+    {
+      "id": "p_bfa39dbe-dd3b-4bcd-a50c-9304d998d58c",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "화룡점정"
+    },
+    {
+      "id": "p_8c220262-06c0-48ed-8598-fbe999df0ee0",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "거센 불길의 용"
+    },
+    {
+      "id": "p_7d8e7fc2-c325-4730-b4a1-b8b72b4b3917",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "불꽃 선풍"
+    },
+    {
+      "id": "p_df5ea42f-b8bb-4638-af5f-993d7016ebd8",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "main_common",
+      "name": "화염용의 숨결"
+    },
+    {
+      "id": "p_f81b1eec-6ea1-48d0-915e-1c2141b09e9a",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support1",
+      "name": "붉은 용•유영"
+    },
+    {
+      "id": "p_09da2b95-c11e-43c3-b01e-aeb5ab08b010",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support1",
+      "name": "붉은 용•장음"
+    },
+    {
+      "id": "p_62606036-f508-4205-9c12-9f2276f57ca9",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support1",
+      "name": "묵부•추적"
+    },
+    {
+      "id": "p_489c66ef-d759-437a-b2e5-6840decc1136",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support1",
+      "name": "묵부•뿔피리"
+    },
+    {
+      "id": "p_e11fc00b-44fe-4ca8-9ee5-d7e8ee6e8897",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support1",
+      "name": "묵부•결계"
+    },
+    {
+      "id": "p_5c2307c9-292c-447c-9f6f-87ed2dc4639c",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support2",
+      "name": "부적•인호"
+    },
+    {
+      "id": "p_d03fe6a5-cb0a-484f-93e9-5c1b1b112aa6",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support2",
+      "name": "인호•화염비늘"
+    },
+    {
+      "id": "p_aa5788ab-917b-461c-abb6-802510a31d6a",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support2",
+      "name": "묵부•매복"
+    },
+    {
+      "id": "p_9e2ceeab-9f61-4d4c-a67e-ffc15956fc49",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support2",
+      "name": "묵부•피의 제물"
+    },
+    {
+      "id": "p_47b45fd4-9a95-486b-8ff9-c9a9befe915d",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support2",
+      "name": "묵부•기습"
+    },
+    {
+      "id": "p_7673acf9-0314-4f91-85b5-a5580eed9500",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "부적•불꽃"
+    },
+    {
+      "id": "p_e56fc196-6e59-44d0-aa67-19aebf7652f6",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "용호기상"
+    },
+    {
+      "id": "p_6e0cafa7-4664-43c3-9e27-862bf518ec44",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "불꽃의 기원"
+    },
+    {
+      "id": "p_908243d3-42d1-4b33-a04a-c7833d45984b",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "거센 불길의 용"
+    },
+    {
+      "id": "p_e3f30a0a-febb-4776-9ccb-22a457a40bf4",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "불꽃 선풍"
+    },
+    {
+      "id": "p_32177627-f208-44c6-940a-7f19f7e02ea2",
+      "character_id": "c_6089d93b-7fac-404f-9261-867a5640ff0d",
+      "style_type": "support_common",
+      "name": "화염용의 숨결"
+    },
+    {
+      "id": "p_fac08fa4-ba9b-424e-9699-4ee928cc66e1",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main1",
+      "name": "압도적인 화력"
+    },
+    {
+      "id": "p_b92175ee-795a-454f-89f3-93f35f2b73ca",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main1",
+      "name": "총알 세례"
+    },
+    {
+      "id": "p_7ec70339-ab0b-45c5-b43f-60e974504a28",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main1",
+      "name": "확신의 순간"
+    },
+    {
+      "id": "p_4a498148-b883-46d9-9898-032e11136f5d",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main1",
+      "name": "탐욕의 총화"
+    },
+    {
+      "id": "p_ef5b5198-dbdf-4d6b-b179-56fd5d0f2ccc",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main1",
+      "name": "뜨거운 방아쇠"
+    },
+    {
+      "id": "p_43d5cb5a-4c32-41c3-8285-c5d63ebe0e82",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main2",
+      "name": "정밀 온도 제어"
+    },
+    {
+      "id": "p_df46a2d2-ab2b-4ce5-af08-b3676ebdfc8b",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main2",
+      "name": "성대한 울림"
+    },
+    {
+      "id": "p_b904ae7a-8495-4648-8e4e-a3ea880dcf5a",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main2",
+      "name": "웅장한 피날레"
+    },
+    {
+      "id": "p_54f36dbd-0bb2-41fa-bce0-78def5a4e147",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main2",
+      "name": "약점 포착"
+    },
+    {
+      "id": "p_2d37c2c4-40dd-49c3-b5ff-4636c8a95e2e",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main2",
+      "name": "전율의 엔딩곡"
+    },
+    {
+      "id": "p_4fae1842-4182-43f3-a2db-43d9c4a4e72b",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "섬세한 강음"
+    },
+    {
+      "id": "p_b7ff2eec-e289-4100-b716-12539fb04096",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "열정의 리듬"
+    },
+    {
+      "id": "p_799bca38-25f0-4bf9-ae78-73ef6570e610",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "뜨거운 춤사위"
+    },
+    {
+      "id": "p_4d2accb0-4c52-4ba3-921b-0ab80ba4efeb",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "피어오르는 불꽃"
+    },
+    {
+      "id": "p_bad78e1f-90c8-4b74-b698-e6d9c671428f",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "과열된 불꽃"
+    },
+    {
+      "id": "p_85d5cd4e-1f12-4a4c-bfbd-4bf331b07e34",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "main_common",
+      "name": "영혼 추적 불꽃"
+    },
+    {
+      "id": "p_b9a20c98-38bd-4def-9c6f-3ed9dbd95fbe",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support1",
+      "name": "추적의 춤"
+    },
+    {
+      "id": "p_e3117e29-677a-413e-88a8-2c63f0e809df",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support1",
+      "name": "산화의 춤"
+    },
+    {
+      "id": "p_bfe93655-bb32-4bd8-a936-38ebbe73a979",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support1",
+      "name": "민첩한 캣스텝"
+    },
+    {
+      "id": "p_90fba079-df2b-437d-9f6d-f3650025a584",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support1",
+      "name": "강해지는 리듬"
+    },
+    {
+      "id": "p_895d8992-e526-499a-aec8-7ec77bbe37a6",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support1",
+      "name": "공명의 탄흔"
+    },
+    {
+      "id": "p_959e6d8c-2c6e-4abb-aab4-b83f90a6cb73",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support2",
+      "name": "퇴보의 춤"
+    },
+    {
+      "id": "p_0ed1ebf2-059a-4a1b-ae4b-861da519a9c1",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support2",
+      "name": "환염의 춤"
+    },
+    {
+      "id": "p_12299cf6-b2a6-4afc-ac66-773f04374129",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support2",
+      "name": "총열의 잔열"
+    },
+    {
+      "id": "p_62fcbabc-0cfc-40ef-b2c1-6784c54ab976",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support2",
+      "name": "열화의 춤사위"
+    },
+    {
+      "id": "p_bede92ee-ca33-4032-9e7b-0907b5fabf9f",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support2",
+      "name": "열공의 불씨"
+    },
+    {
+      "id": "p_da1106be-eafe-4058-bca2-80059e5e608a",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "열기의 협력"
+    },
+    {
+      "id": "p_1791e686-e9f9-463e-885f-ef556e632e45",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "탄도 강화"
+    },
+    {
+      "id": "p_5c983251-3da2-493f-bd76-b7f22299f6e1",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "압력 증폭"
+    },
+    {
+      "id": "p_b443fafc-2957-4d76-b222-a231fe290643",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "피어오르는 불꽃"
+    },
+    {
+      "id": "p_cd6f5e79-1d1e-48e2-8f3e-f52023ce929b",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "과열된 불꽃"
+    },
+    {
+      "id": "p_e2eb100d-6fff-4721-b362-cbda85fd91d5",
+      "character_id": "c_f978b63b-b948-4402-8129-d01c15a29108",
+      "style_type": "support_common",
+      "name": "영혼 추적 불꽃"
+    },
+    {
+      "id": "p_ce7fa384-ec9c-4ed9-a50d-0e1b54c0dbcb",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main1",
+      "name": "확산의 방아쇠"
+    },
+    {
+      "id": "p_b255873c-6da0-4d09-8ae0-5faedf431be7",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main1",
+      "name": "화염 탄두"
+    },
+    {
+      "id": "p_0ff53e1f-4c65-4933-854a-17ce7edaef1b",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main1",
+      "name": "타오르는 탄환의 잔열"
+    },
+    {
+      "id": "p_516935ef-55f6-4354-9e15-965bec522dfc",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main1",
+      "name": "용병의 직감"
+    },
+    {
+      "id": "p_2c7d7398-b0b8-4871-ab09-424822e085be",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main1",
+      "name": "탄약 과장전"
+    },
+    {
+      "id": "p_d65ebbf3-2c7c-4862-be1e-108b4550c710",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main2",
+      "name": "에너지 충전 레버"
+    },
+    {
+      "id": "p_496b50e7-62c1-4aef-8fc2-7e0f03e64b9d",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main2",
+      "name": "럭키 탄창"
+    },
+    {
+      "id": "p_e3ea5f61-58d5-469f-a7c2-a46108d04aa7",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main2",
+      "name": "진격의 나팔"
+    },
+    {
+      "id": "p_655382df-90b9-4868-b834-f05d69209ad7",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main2",
+      "name": "폭염 인화"
+    },
+    {
+      "id": "p_998aad17-ff3e-4d0a-93b0-09867140c7db",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main2",
+      "name": "사격의 타이밍"
+    },
+    {
+      "id": "p_d68d9177-b69b-4bbd-a911-0edd97194d13",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "자초한 화염"
+    },
+    {
+      "id": "p_c4f40d5d-d7c4-472a-a42b-ac27db3db385",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "완벽한 전투 태세"
+    },
+    {
+      "id": "p_88a01167-7e61-4d3b-827a-292540f6cb61",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "사격 격투술"
+    },
+    {
+      "id": "p_4c2a21a4-cf27-4ecd-baa2-cf7785453775",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "파군의 일격"
+    },
+    {
+      "id": "p_d0836210-6b80-4124-8a9d-d6ea16d0cc2b",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "최후의 일격"
+    },
+    {
+      "id": "p_33d89b8c-0835-421a-b140-5e49eda18674",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "main_common",
+      "name": "화염의 일격"
+    },
+    {
+      "id": "p_02abda10-fd9f-4e0d-aa18-349a5230ec5e",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support1",
+      "name": "치열한 전투"
+    },
+    {
+      "id": "p_494939a6-e060-455c-8318-86aa8ce8a789",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support1",
+      "name": "광역 폭격"
+    },
+    {
+      "id": "p_10f047e4-59da-48c9-a36e-94c286e595ea",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support1",
+      "name": "연쇄 반응"
+    },
+    {
+      "id": "p_c81e74ce-cb0f-46d9-b402-ff8f0a350f00",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support1",
+      "name": "강력 폭격"
+    },
+    {
+      "id": "p_12d57c02-02e2-44bf-8ef1-dabe0a0e130f",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support1",
+      "name": "약점 포착"
+    },
+    {
+      "id": "p_8ff195cb-8a70-496f-b452-7d2e69f33411",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support2",
+      "name": "기선제압"
+    },
+    {
+      "id": "p_666342e8-682e-4959-8335-e381460191f3",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support2",
+      "name": "정밀 폭격"
+    },
+    {
+      "id": "p_8abbd6c5-96b6-43e3-b6bf-d4bac0bb2605",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support2",
+      "name": "럭키 포화"
+    },
+    {
+      "id": "p_1b23245b-42e2-489d-b299-742ab7b79231",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support2",
+      "name": "특별 선물"
+    },
+    {
+      "id": "p_3da67ac5-6eef-42c8-addc-17271a9c03fb",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support2",
+      "name": "결정적 일격"
+    },
+    {
+      "id": "p_51b8dbd2-a131-40ae-9424-59e4ca64c774",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "과열의 임계점"
+    },
+    {
+      "id": "p_42aa01cc-be55-4f62-bf92-2207eaf0df0e",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "점진적 열기강화"
+    },
+    {
+      "id": "p_ce73ae13-3f0e-4af3-9e31-696eb154a732",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "분위기 최고조"
+    },
+    {
+      "id": "p_5087fd45-5690-488e-9506-ec8dca4ccd3b",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "파군의 일격"
+    },
+    {
+      "id": "p_2e2e4a68-293c-4221-8daa-587a76ac1e2b",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "최후의 일격"
+    },
+    {
+      "id": "p_1dd94537-2967-4bbe-bd3f-ccd0aa7256ea",
+      "character_id": "c_398ebc27-7316-4075-b3af-dd2c6e59649e",
+      "style_type": "support_common",
+      "name": "화염의 일격"
+    },
+    {
+      "id": "p_cd8cbd44-8612-4694-9916-423863680fb1",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main1",
+      "name": "나선 스핀"
+    },
+    {
+      "id": "p_498fa5bc-054e-4634-a42e-a55f0aa606c1",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main1",
+      "name": "엔딩곡"
+    },
+    {
+      "id": "p_06f76912-ba56-4051-9776-b1155dc1d1d8",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main1",
+      "name": "심연 관찰"
+    },
+    {
+      "id": "p_54fcd47f-4a52-419e-a460-86d0eb297bca",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main1",
+      "name": "위치 조정"
+    },
+    {
+      "id": "p_5aaea1c7-712f-406a-a3c8-568d62e3c3c2",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main1",
+      "name": "황당한 소동"
+    },
+    {
+      "id": "p_635f76d9-96e7-44be-a045-cfdaef38fbb9",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main2",
+      "name": "기쁨의 시가"
+    },
+    {
+      "id": "p_161c23a4-7a7a-497b-857d-edf24010ed54",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main2",
+      "name": "또 다른 자아"
+    },
+    {
+      "id": "p_3da27563-6a08-456d-aa0a-0f1be1a5b5fa",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main2",
+      "name": "체호프의 총"
+    },
+    {
+      "id": "p_4f27235e-8b9d-4854-a28f-818d7fc4b50e",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main2",
+      "name": "감정 분출"
+    },
+    {
+      "id": "p_48bb6c47-6585-4b8f-bd75-ab2d549bbc7d",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main2",
+      "name": "주인공 버프"
+    },
+    {
+      "id": "p_09297257-3745-4229-9bcf-c29476154958",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "리듬 가속"
+    },
+    {
+      "id": "p_7c8cb158-ce53-4f7c-9769-ffc24037b6ab",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "즉흥 연기"
+    },
+    {
+      "id": "p_edf795b5-75b6-4e1e-bb5f-cbf4b2790378",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "전장의 지배자"
+    },
+    {
+      "id": "p_4d1580b8-cc2a-4302-bc6b-aea6e7845582",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "숨막히는 불꽃"
+    },
+    {
+      "id": "p_86bdff08-955c-4158-a9de-9747b7a6351e",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "해탈의 깨달음"
+    },
+    {
+      "id": "p_a3b332d0-a147-4287-9afc-2d51c599a2f6",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "main_common",
+      "name": "불길의 윤회"
+    },
+    {
+      "id": "p_17124110-daa4-4440-a37a-7ccdff93509a",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support1",
+      "name": "미래•희망의 불씨"
+    },
+    {
+      "id": "p_79979057-de13-4b05-b29d-567d20983cbb",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support1",
+      "name": "불씨의 재점화"
+    },
+    {
+      "id": "p_4993af10-e570-4d84-811b-212fcfa48473",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support1",
+      "name": "완벽한 연계"
+    },
+    {
+      "id": "p_2785b39f-1f28-42b3-bfe5-603a92a064a9",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support1",
+      "name": "복선 검증"
+    },
+    {
+      "id": "p_b2e6f504-76d4-40eb-b417-0ef9f8f9a4e6",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support1",
+      "name": "군중 효과"
+    },
+    {
+      "id": "p_190f5c92-4b32-43c7-9e98-f299060b74c0",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support2",
+      "name": "과거•잿더미"
+    },
+    {
+      "id": "p_3d552bfd-0892-42ab-b037-516e8eae16ad",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support2",
+      "name": "잿더미 속 불씨"
+    },
+    {
+      "id": "p_86c7e3d7-2a9b-46b7-ad36-a6af3642ea10",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support2",
+      "name": "인상 강화"
+    },
+    {
+      "id": "p_62188493-b77a-494a-8d0a-cb9e425537af",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support2",
+      "name": "시각적 충격"
+    },
+    {
+      "id": "p_7af6412f-9f20-4d5c-81c2-a3c62e9d7763",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support2",
+      "name": "이스터 에그"
+    },
+    {
+      "id": "p_c2b9c794-04de-4deb-9e51-a04e40049e3c",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "배후의 지원"
+    },
+    {
+      "id": "p_1b36e21e-729a-4c8b-a8e0-07b8a4da9d28",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "특별 출연"
+    },
+    {
+      "id": "p_a1664737-e4d3-4973-a888-ac8353182778",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "끝없는 공연"
+    },
+    {
+      "id": "p_f4c026db-455d-4d44-8287-970978b4bf95",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "숨막히는 불꽃"
+    },
+    {
+      "id": "p_98c3ad38-8b43-4526-b0a3-a40a08df7836",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "해탈의 깨달음"
+    },
+    {
+      "id": "p_3d8cefb2-6f75-44a3-bb2e-145335c8a3fa",
+      "character_id": "c_e2e388f3-5fab-4f5a-85f2-52325f83beee",
+      "style_type": "support_common",
+      "name": "불길의 윤회"
+    },
+    {
+      "id": "p_545f1d56-654f-4e6b-a75d-3dfa42cb129b",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main1",
+      "name": "신성 방패의 반격"
+    },
+    {
+      "id": "p_1452c0ea-880a-46a5-8579-2d4925886855",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main1",
+      "name": "삼위일체"
+    },
+    {
+      "id": "p_0d0ce932-b246-4e10-af75-58b419d3faab",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main1",
+      "name": "빛의 낙하 반격"
+    },
+    {
+      "id": "p_f9049771-dbac-4ba8-b376-6789abd35aae",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main1",
+      "name": "가드 강화•빛"
+    },
+    {
+      "id": "p_0fa1247f-9bdd-49f4-96e3-4e6edb46bd04",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main1",
+      "name": "가드 강화•공격"
+    },
+    {
+      "id": "p_23f12f00-fa25-4cc0-840c-67d51e5aec05",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main2",
+      "name": "공수 일체"
+    },
+    {
+      "id": "p_14ceebde-bdf5-453f-9f34-6b1cea2ae508",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main2",
+      "name": "성스러운 빛의 영역"
+    },
+    {
+      "id": "p_edd20044-3d79-4a4a-a60b-5d43fa277051",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main2",
+      "name": "불굴의 의지"
+    },
+    {
+      "id": "p_0c2fd569-feee-4812-b164-3d192bd2c227",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main2",
+      "name": "신성 방패의 축복"
+    },
+    {
+      "id": "p_bb5f1f96-b4ce-44d4-bb55-f70b857cfef1",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main2",
+      "name": "반격 시기"
+    },
+    {
+      "id": "p_1856c7ae-6101-49a7-bcc4-c99e0fba8ae2",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "빛의 장막"
+    },
+    {
+      "id": "p_f726d5ef-826e-4332-967a-22fbe0eb6c50",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "자유분방"
+    },
+    {
+      "id": "p_c7c6ef48-aa1d-43eb-99c6-f87f1d26da8e",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "반항"
+    },
+    {
+      "id": "p_b899430a-22db-4283-8e36-e7356c6610ea",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "기사의 맹세•천공의 붕괴"
+    },
+    {
+      "id": "p_4a3d4ff2-8006-4663-8ef5-0342230bbb2c",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "기사의 맹세•성스러운 백악갑옷"
+    },
+    {
+      "id": "p_bd42196c-72ee-40ce-909f-d8ede7f069bd",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "main_common",
+      "name": "기사의 맹세•전의 고양"
+    },
+    {
+      "id": "p_103fc3f8-bdf5-4f42-9803-fb856bc3848a",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support1",
+      "name": "앙주 심상 결정"
+    },
+    {
+      "id": "p_f851fd16-afa9-433b-8329-a2ff0db92f1d",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support1",
+      "name": "이어지는 스펙트럼"
+    },
+    {
+      "id": "p_7896836d-d0a4-479a-92ce-03a270885399",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support1",
+      "name": "강적 제압"
+    },
+    {
+      "id": "p_e33b4d30-6faa-4cfc-8658-fea53ea45b58",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support1",
+      "name": "강한 빛으로 인한 실명"
+    },
+    {
+      "id": "p_6a2cfa52-9024-4a4d-8cc2-c0890cf20f49",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support1",
+      "name": "기사의 신성한 표식"
+    },
+    {
+      "id": "p_e1a72fc5-c38c-4400-a40e-76e1b1353ba0",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support2",
+      "name": "완벽한 회전"
+    },
+    {
+      "id": "p_29063d89-e8cb-44c0-9e5c-d59318fd9efa",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support2",
+      "name": "회전의 오의"
+    },
+    {
+      "id": "p_2ee28d5f-7585-4ebe-8d70-173a19f135d2",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support2",
+      "name": "절묘한 릴레이"
+    },
+    {
+      "id": "p_b5cec4de-ec5d-4801-b681-0c7fb7dca984",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support2",
+      "name": "특수 스킬 에너지 증폭"
+    },
+    {
+      "id": "p_0591ebe2-9c87-4ddc-847c-e08b489a7b00",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support2",
+      "name": "약점 노출"
+    },
+    {
+      "id": "p_79748e34-403e-40f4-840e-7ad4ed21cacc",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "빛나는 깃발"
+    },
+    {
+      "id": "p_be1418da-9c03-4439-ad45-05a2733439e4",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "호위의 결심"
+    },
+    {
+      "id": "p_2fc79e5b-53fd-46da-86d6-8d008edb521e",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "견고의 신조"
+    },
+    {
+      "id": "p_a0152e6d-1b21-48ae-920b-d01bc5820e40",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "기사의 맹세•천공의 붕괴"
+    },
+    {
+      "id": "p_ff062e90-6ddc-49a6-be6f-3b12426b2e70",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "기사의 맹세•성스러운 백악갑옷"
+    },
+    {
+      "id": "p_1e8ffd2d-447d-4052-8f96-0ee350e637d4",
+      "character_id": "c_05b5a8b8-3d1f-447d-8e62-544963d75669",
+      "style_type": "support_common",
+      "name": "기사의 맹세•전의 고양"
+    },
+    {
+      "id": "p_020e4fcb-5f04-4891-8bc9-93f084e9f1c7",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main1",
+      "name": "에너지 축적•연속"
+    },
+    {
+      "id": "p_788f63e7-1998-44ce-a8c9-bde79a4fc9a0",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main1",
+      "name": "에너지 축적•연결"
+    },
+    {
+      "id": "p_1b987ecd-5bc1-44a9-be20-0febc0eed078",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main1",
+      "name": "에너지 축적 및 결합"
+    },
+    {
+      "id": "p_1a11a4af-c33a-417a-b5ee-5064bfe38331",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main1",
+      "name": "충전 순환"
+    },
+    {
+      "id": "p_2fdddb43-d6a9-4910-82b1-1597bf98e4dd",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main1",
+      "name": "방전 테스트"
+    },
+    {
+      "id": "p_0980880e-e4c6-4509-bcd8-ff4416977729",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main2",
+      "name": "에너지 축적•인력"
+    },
+    {
+      "id": "p_b15a9053-ca3c-45ce-9bcb-172e1e684483",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main2",
+      "name": "에너지 축적•부력"
+    },
+    {
+      "id": "p_2673db7b-647b-49be-872e-643db7629523",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main2",
+      "name": "회수 및 재활용"
+    },
+    {
+      "id": "p_1d16dd56-ad72-4564-a030-3405da26aee0",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main2",
+      "name": "열 관리"
+    },
+    {
+      "id": "p_880057c3-2cb6-4b67-a410-45721b58f9ab",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main2",
+      "name": "전력 관리"
+    },
+    {
+      "id": "p_122cdccb-5f66-4525-ab1e-f2b6ec528fbd",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "전도체 전환"
+    },
+    {
+      "id": "p_46fe4b67-00a4-491d-93d6-8a28587a860e",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "누전 방호"
+    },
+    {
+      "id": "p_9e210de0-2551-49c9-996c-56f8e86bb81d",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "균형의 회로"
+    },
+    {
+      "id": "p_3ad40895-ed7a-40f4-817d-fe19c4084a05",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "천상의 기린"
+    },
+    {
+      "id": "p_e68917d5-65b6-4cda-9fb8-9493cc28b023",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "백수의 왕"
+    },
+    {
+      "id": "p_38ec4b6f-5a0e-4d32-99b0-83d82972318e",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "main_common",
+      "name": "사신수의 가호"
+    },
+    {
+      "id": "p_e8346a3a-065d-4d28-bbdf-7a174e22fce0",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support1",
+      "name": "뇌동•삼원패"
+    },
+    {
+      "id": "p_607136c8-fedd-4599-8ae7-334edae00ac7",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support1",
+      "name": "뇌동•삭수패"
+    },
+    {
+      "id": "p_bbc434a2-5ba1-47b4-b362-c8d3b0874657",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support1",
+      "name": "멘젠쯔모"
+    },
+    {
+      "id": "p_34322544-c995-4a43-9bf0-245d435a6252",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support1",
+      "name": "삼연각"
+    },
+    {
+      "id": "p_972b583c-8f44-459c-bacc-954ac9fbefcf",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support1",
+      "name": "영상개화"
+    },
+    {
+      "id": "p_fffbc6ea-9fd0-4abe-aaf8-ebcb3cdb1856",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support2",
+      "name": "뇌동•만수패"
+    },
+    {
+      "id": "p_0396c1bd-af1b-4b18-b90a-ee713f904eb4",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support2",
+      "name": "뇌동•통수패"
+    },
+    {
+      "id": "p_699bb3e3-fa24-4787-b1ae-bff053dd1a21",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support2",
+      "name": "일기통관"
+    },
+    {
+      "id": "p_22b36bd3-8446-473a-bedc-153599da32f7",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support2",
+      "name": "삼색동순"
+    },
+    {
+      "id": "p_bdfb1b38-f9d8-458b-ad93-fea77c0886cd",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support2",
+      "name": "탕야오"
+    },
+    {
+      "id": "p_97770196-ea37-4794-89dd-6333a92fd582",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "사교의 달인"
+    },
+    {
+      "id": "p_101a28b7-3b02-4cd6-9e8d-c08a4b2e6a24",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "식은 죽 먹기"
+    },
+    {
+      "id": "p_a54479e5-f8d9-4bde-aef3-52fca1364758",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "가게 점장"
+    },
+    {
+      "id": "p_14acf09d-e485-4fc2-87dd-137187a24d55",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "천상의 기린"
+    },
+    {
+      "id": "p_f8a950a4-ed04-4086-9b52-ccc1bc98ea92",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "백수의 왕"
+    },
+    {
+      "id": "p_ef131792-e211-45a2-8e57-decc4a44b96a",
+      "character_id": "c_5d4bcd2a-9e3d-473d-ab65-7ef198370168",
+      "style_type": "support_common",
+      "name": "사신수의 가호"
+    },
+    {
+      "id": "p_66f91274-0cf2-4c69-b0b4-27604ae5c80e",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main1",
+      "name": "번개 영역 부유"
+    },
+    {
+      "id": "p_79099c19-ce34-4458-8b24-5cf716c09910",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main1",
+      "name": "전기 사슬"
+    },
+    {
+      "id": "p_01e6aecf-ce5e-42b6-811e-aee65518ba0d",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main1",
+      "name": "열공"
+    },
+    {
+      "id": "p_fa5bbf3d-1d5b-43f6-b3a7-909bb94f17da",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main1",
+      "name": "총소리"
+    },
+    {
+      "id": "p_a952d6a1-80b7-44b8-90d0-024c7a0edfe1",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main1",
+      "name": "송곳"
+    },
+    {
+      "id": "p_b658de99-232f-4c50-b479-f8245b9203da",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main2",
+      "name": "장총 소탕"
+    },
+    {
+      "id": "p_9bf1951f-c1d1-4f17-a4e4-a75ec6fd706b",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main2",
+      "name": "번개창무"
+    },
+    {
+      "id": "p_a3d1abf1-0360-4568-b970-6f2c883c331b",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main2",
+      "name": "전기 사슬"
+    },
+    {
+      "id": "p_d999af91-e4b9-4ae5-840e-9efc75a535e3",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main2",
+      "name": "파광"
+    },
+    {
+      "id": "p_46c4b0df-2e77-4f32-83c3-d03d52e1e06b",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main2",
+      "name": "현란한 번개"
+    },
+    {
+      "id": "p_7f0c2023-487a-4357-82fa-d00258939f96",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "순간의 습격"
+    },
+    {
+      "id": "p_2ad20886-25a6-493e-8822-338405dfc7f0",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "성스러운 빛의 각인"
+    },
+    {
+      "id": "p_824a4c9d-cc77-44d3-95b8-aa795f5e046f",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "포획"
+    },
+    {
+      "id": "p_bcfea62e-314b-4be6-b122-60220af400d0",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "낙창•광역"
+    },
+    {
+      "id": "p_f5ea5f3f-8eba-480b-ad66-ece265b4378a",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "낙창•전기 속박"
+    },
+    {
+      "id": "p_3a78ab78-d637-4c15-b18c-4827e32c7636",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "main_common",
+      "name": "낙창•번개 파도"
+    },
+    {
+      "id": "p_597e7057-bbc4-43fd-b107-01cc78f2d0dd",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support1",
+      "name": "광염•연속"
+    },
+    {
+      "id": "p_f76deb08-10d7-4e7a-8523-4ae52a7dcc4b",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support1",
+      "name": "광염•번쩍임"
+    },
+    {
+      "id": "p_08255e45-86a9-4f79-9255-43fc460eeb89",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support1",
+      "name": "빛의 빗방울"
+    },
+    {
+      "id": "p_95d8b3ba-2d16-477f-ac50-e6dc67b4ad44",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support1",
+      "name": "찰나의 빛"
+    },
+    {
+      "id": "p_00ebd9a7-fbb1-4523-8c16-f930fa7f8cf1",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support1",
+      "name": "그림자 비행"
+    },
+    {
+      "id": "p_310e5883-c760-4f8d-8530-25bd5d335a35",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support2",
+      "name": "광염•응축"
+    },
+    {
+      "id": "p_2b160e76-546e-4d12-bc47-909a63f97d92",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support2",
+      "name": "광염•추격"
+    },
+    {
+      "id": "p_c1ab3583-5795-415e-a3a1-75d55477a20c",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support2",
+      "name": "하늘을 찢는 기습"
+    },
+    {
+      "id": "p_336060d7-b0ab-4c0c-ab94-11ec2220fdd6",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support2",
+      "name": "하늘을 비추는 여명"
+    },
+    {
+      "id": "p_6e50ab65-9600-4daf-90ce-b67acd033a54",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support2",
+      "name": "빛의 장벽 폭풍"
+    },
+    {
+      "id": "p_3e030e9b-b48b-46f8-8fb1-7f9029e38aa6",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "성스러운 말의 기도"
+    },
+    {
+      "id": "p_a6f4264f-fd9d-4ef0-8c9d-1ed083fe829e",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "성스러운 빛의 세례"
+    },
+    {
+      "id": "p_3368f4d9-7c71-4361-97e6-f4979b0d8176",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "성스러운 창의 심판"
+    },
+    {
+      "id": "p_7e05158c-e5a2-4220-86c6-16fd137cb5c3",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "낙창•광역"
+    },
+    {
+      "id": "p_54497ae6-8273-40e7-8b68-25800bacd1da",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "낙창•전기 속박"
+    },
+    {
+      "id": "p_1bb88636-2a10-4544-96dc-2cf6b77ca91d",
+      "character_id": "c_f9a2ecc5-4cd7-44de-951d-bd33c864ae53",
+      "style_type": "support_common",
+      "name": "낙창•번개 파도"
+    },
+    {
+      "id": "p_5c429ac5-b0c7-485a-87f3-4f04fb897a6f",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main1",
+      "name": "최후통첩"
+    },
+    {
+      "id": "p_0425b717-7982-4e48-b61f-e5927d51e776",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main1",
+      "name": "스트리트 파이트"
+    },
+    {
+      "id": "p_6ac98489-d8e5-445e-be12-3893cfeaf2b8",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main1",
+      "name": "윈드 애시 리듬"
+    },
+    {
+      "id": "p_9807801a-48dd-460e-967a-36ae7ce63625",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main1",
+      "name": "전투의 승화"
+    },
+    {
+      "id": "p_e4e6ba9c-50cf-4bf2-8b10-7d53a42bd850",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main1",
+      "name": "짜릿한 손맛"
+    },
+    {
+      "id": "p_e216768a-8db5-4e4f-bd19-4d27915d12e8",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main2",
+      "name": "끄트머리 사용법"
+    },
+    {
+      "id": "p_ebbc711b-1b9e-4e63-ab9a-94e0b4627061",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main2",
+      "name": "연속 공격"
+    },
+    {
+      "id": "p_fbaf699f-665d-4bd3-bba0-1bce10ed0e31",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main2",
+      "name": "빛에 그을린 흔적"
+    },
+    {
+      "id": "p_5e1e384e-2b94-40ad-a3ea-e1988ff9b875",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main2",
+      "name": "눈 부신 광휘"
+    },
+    {
+      "id": "p_270f8220-49a3-4277-835c-e947b87fca11",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main2",
+      "name": "성운의 메아리"
+    },
+    {
+      "id": "p_59e5293f-bb0f-48e9-86b4-052ff389da91",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "별빛 하늘을 가르며"
+    },
+    {
+      "id": "p_d64c51d7-c692-42ee-9e70-766d45580f8d",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "보이는 게 다가 아냐"
+    },
+    {
+      "id": "p_73ed99c4-1311-43b5-b122-3adbc56482b0",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "홈 어드밴티지"
+    },
+    {
+      "id": "p_30a53c6f-41ee-4e30-ada2-1ed99b8d543e",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "김급 증원"
+    },
+    {
+      "id": "p_687d4951-eef8-481e-b426-c3b771ae5912",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "번쩍이는 별빛"
+    },
+    {
+      "id": "p_5890aad8-394b-4acd-9ccf-f08a7e0f86fe",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "main_common",
+      "name": "약점 직격타"
+    },
+    {
+      "id": "p_77522d0a-29e3-4575-986e-b8d2e388130a",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support1",
+      "name": "4성 수배"
+    },
+    {
+      "id": "p_0bfc0a0b-7b9f-46a6-a19b-cbc5cc02ff10",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support1",
+      "name": "섬광 폭발"
+    },
+    {
+      "id": "p_540f7d5e-78ee-49a2-808e-b02938baa134",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support1",
+      "name": "욕망의 봉쇄"
+    },
+    {
+      "id": "p_d38aaeb2-3a7b-4c87-ac97-701765d5d63f",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support1",
+      "name": "완벽한 타격지점"
+    },
+    {
+      "id": "p_8af5523d-c3af-4890-a764-43c58381b65a",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support1",
+      "name": "클러치 득점"
+    },
+    {
+      "id": "p_4e4279f1-2e0c-4b5f-bade-b04023bafe8f",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support2",
+      "name": "수호의 별빛"
+    },
+    {
+      "id": "p_ddd50f44-b93e-4521-986d-d4d7e40ffe46",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support2",
+      "name": "성핵 폭발"
+    },
+    {
+      "id": "p_f32ffcaf-e5fc-450c-b9bf-90c0695b5431",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support2",
+      "name": "완벽한 포물선"
+    },
+    {
+      "id": "p_b114d085-76ab-4aed-bc9c-52b6ba46b4f2",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support2",
+      "name": "삼루타"
+    },
+    {
+      "id": "p_08b419db-b002-4632-be8b-e5404c38e0d5",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support2",
+      "name": "엄청난 환호"
+    },
+    {
+      "id": "p_b6a41e28-1d17-48b1-93b7-c3334727a51c",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "빛의 연계"
+    },
+    {
+      "id": "p_c9529a89-e231-47af-9417-6ad3f8fde2e3",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "윈드 애시를 건드렸어"
+    },
+    {
+      "id": "p_d4f87a54-608c-4ba9-aedf-594713a946db",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "홈런 상태"
+    },
+    {
+      "id": "p_fdec76aa-a791-4390-89da-21ef155e9771",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "번쩍이는 별빛"
+    },
+    {
+      "id": "p_1e7bc116-0738-4467-ae49-ec0312a47a3d",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "긴급 증원"
+    },
+    {
+      "id": "p_c994a372-a6f5-4c00-bf29-5ab78cbe81e4",
+      "character_id": "c_dc649f14-7145-4c98-891c-1b3eca38cf19",
+      "style_type": "support_common",
+      "name": "약점 직격타"
+    },
+    {
+      "id": "p_33e78d4e-0c0b-45bf-a1b2-1471bad76b2a",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main1",
+      "name": "환상의 발걸음"
+    },
+    {
+      "id": "p_b7c9384c-3f3d-4d0f-aac1-ce0461c56d38",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main1",
+      "name": "칼날 같은 눈"
+    },
+    {
+      "id": "p_a4f7cff2-6958-44f4-a609-9199d52cf947",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main1",
+      "name": "설원의 제압"
+    },
+    {
+      "id": "p_5de47bd4-da2c-4a81-baa0-a4ee593b954f",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main1",
+      "name": "설경 돌파"
+    },
+    {
+      "id": "p_8ebc1e67-d49c-4b5f-b0a7-0b1178177277",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main1",
+      "name": "흰 눈의 폭발"
+    },
+    {
+      "id": "p_0e3b90e7-4596-40f9-93a7-71549d5e93b1",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main2",
+      "name": "달빛의 분출"
+    },
+    {
+      "id": "p_22448c1b-76fe-4a2b-afae-826fc9e4c11b",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main2",
+      "name": "별빛의 도약"
+    },
+    {
+      "id": "p_8cc5cf86-ad42-46b7-86ff-c540758a4c57",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main2",
+      "name": "달빛 폭발"
+    },
+    {
+      "id": "p_77a92cc7-ffee-43a5-ab85-692a74b5cb36",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main2",
+      "name": "초승달 영혼 자르기"
+    },
+    {
+      "id": "p_dda2f2d5-9388-4a8b-a0dd-f938d306a1ca",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main2",
+      "name": "달그림자 콤보"
+    },
+    {
+      "id": "p_a13515ea-0484-4d6c-aca2-dbd9c0b9f6e9",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "토끼의 그림자 질주"
+    },
+    {
+      "id": "p_7b70931d-1e00-430c-832f-cc41bb756c7f",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "토끼의 도약 추적"
+    },
+    {
+      "id": "p_7cc101e8-04d2-4a84-aba6-e7779a9bfa50",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "토끼의 집중하는 빛"
+    },
+    {
+      "id": "p_b3259b7f-667b-484e-bb21-77b2a703a04f",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "월광을 향한 외침"
+    },
+    {
+      "id": "p_ff1ef20b-5078-46f2-aabe-db7b54a7fdea",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "고요함 속 물결"
+    },
+    {
+      "id": "p_a8990012-2902-44d2-8fac-bbdb6ee6299d",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "main_common",
+      "name": "공허의 파도"
+    },
+    {
+      "id": "p_80b1b2ff-39c1-4e13-955f-c3219d9aea7f",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support1",
+      "name": "토끼의 동행"
+    },
+    {
+      "id": "p_3ee37987-1ce6-46ce-9e49-1a877e35ec9c",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support1",
+      "name": "쌍월의 회전"
+    },
+    {
+      "id": "p_9185fdf7-5ab2-4768-a2c0-c8aab524879e",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support1",
+      "name": "파도의 춤사위"
+    },
+    {
+      "id": "p_e20e0ec5-ea99-498e-9081-ebc939888d52",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support1",
+      "name": "눈의 리듬"
+    },
+    {
+      "id": "p_6c8014a9-8609-482b-a58f-4867f48d4c94",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support1",
+      "name": "월식 폭발"
+    },
+    {
+      "id": "p_6757723d-6e62-4875-b5e6-cee2414bea8b",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support2",
+      "name": "토끼 파도 분사"
+    },
+    {
+      "id": "p_101d35a1-1412-421d-8d58-a1c4129d1d2f",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support2",
+      "name": "물결 자르기"
+    },
+    {
+      "id": "p_72697965-5a34-47ce-a586-61db5fb30562",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support2",
+      "name": "파도의 표류"
+    },
+    {
+      "id": "p_e5acbed5-7295-49bc-b8a9-3d978a082d41",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support2",
+      "name": "보드의 물결 가르기"
+    },
+    {
+      "id": "p_f96d1360-d5f0-4f1e-afd7-a97dce5c3b8a",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support2",
+      "name": "파도 속 가속"
+    },
+    {
+      "id": "p_cc197e60-8dcf-4d72-89f1-9e5cd3790197",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "달의 장막 강림"
+    },
+    {
+      "id": "p_48934bfd-7b74-4b4f-a51b-347c8df462a0",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "조석 에너지 충전"
+    },
+    {
+      "id": "p_ce6321a6-8190-4a56-8721-990117712bb9",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "파도 밟기"
+    },
+    {
+      "id": "p_e602192f-b965-4084-af79-e37734c0a908",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "월광을 향한 외침"
+    },
+    {
+      "id": "p_38887eb2-c32e-4983-a26f-22972f8d3f51",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "고요함 속 물결"
+    },
+    {
+      "id": "p_7ea54a6f-f258-4232-ad24-46788664a0a3",
+      "character_id": "c_f5bf4b57-a70c-41a9-aaf1-1845cfa6e31c",
+      "style_type": "support_common",
+      "name": "공허의 파도"
+    }
+  ],
+  "sounds": [],
+  "records": []
+}
