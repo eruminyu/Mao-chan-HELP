@@ -156,7 +156,8 @@
       "id": "p_80cc7db3-919a-45c6-91c5-25b4a6393c38",
       "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
       "style_type": "main1",
-      "name": "등사 파도"
+      "name": "등사 파도",
+      "params": []
     },
     {
       "id": "p_ecca3583-51f6-4f58-ae85-c91df2487d1f",
@@ -168,13 +169,21 @@
       "id": "p_7fa1e7fc-f6d1-4b82-a8c6-79f76fcda71b",
       "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
       "style_type": "main1",
-      "name": "환상 비늘"
+      "name": "환상 비늘",
+      "params": [
+        "HitDamage,DamageNum,144310701"
+      ]
     },
     {
       "id": "p_fa0dd288-2e13-460c-b3bb-1c4c6be444f5",
       "character_id": "c_f19f5376-817d-4829-8eab-6f82edd8c45e",
       "style_type": "main1",
-      "name": "그림자 낙하"
+      "name": "그림자 낙하",
+      "effects": [],
+      "params": [
+        "Effect,LevelUp,14405001,EffectTypeFirstSubtype,Enum,EAT",
+        "Effect,LevelUp,14405001,EffectTypeParam1,HdPct"
+      ]
     },
     {
       "id": "p_d2921d82-31aa-4930-b0db-c5dc87c7f5dd",
