@@ -13,7 +13,9 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('마오 도우미 (v7.0)')
-        self.setGeometry(100, 100, 520, 900)
+        
+        # (★★ 수정 ★★) 에디터가 보이도록 창을 넓히고, 트래커에 맞춰 높이를 줄임
+        self.setGeometry(100, 100, 1000, 750)
 
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
@@ -21,6 +23,10 @@ class MainWindow(QMainWindow):
         # 에디터와 트래커 인스턴스 생성
         # 트래커가 먼저 생성되어야 단축키 설정 등을 불러올 수 있습니다.
         self.tracker_widget = TrackerApp()
+        
+        # (★★ 추가 ★★) 트래커 탭이 1000px로 늘어나지 않도록 최대 너비 고정
+        self.tracker_widget.setMaximumWidth(550) 
+        
         self.editor_widget = DBEditorApp()
 
         # 탭에 위젯 추가
@@ -52,12 +58,21 @@ def main():
     main_window = MainWindow()
 
     # 트래커의 전역 단축키 설정 로직 가져오기
+    # (★수정★) main_window.tracker_widget.hotkeys 가 load_config()를 통해 로드된 이후에 설정
     ex = main_window.tracker_widget
     try:
-        if ex.hotkeys.get("ocr"): keyboard.add_hotkey(ex.hotkeys["ocr"], ex.ocr_requested.emit)
-        if ex.hotkeys.get("select1"): keyboard.add_hotkey(ex.hotkeys["select1"], lambda: ex.selection_requested.emit(0))
-        if ex.hotkeys.get("select2"): keyboard.add_hotkey(ex.hotkeys["select2"], lambda: ex.selection_requested.emit(1))
-        if ex.hotkeys.get("select3"): keyboard.add_hotkey(ex.hotkeys["select3"], lambda: ex.selection_requested.emit(2))
+        if ex.hotkeys.get("ocr"):
+            keyboard.add_hotkey(ex.hotkeys["ocr"], ex.ocr_requested.emit)
+            print(f"'{ex.hotkeys['ocr']}' 단축키 (OCR) 설정됨.")
+        if ex.hotkeys.get("select1"):
+            keyboard.add_hotkey(ex.hotkeys["select1"], lambda: ex.selection_requested.emit(0))
+            print(f"'{ex.hotkeys['select1']}' 단축키 (선택 1) 설정됨.")
+        if ex.hotkeys.get("select2"):
+            keyboard.add_hotkey(ex.hotkeys["select2"], lambda: ex.selection_requested.emit(1))
+            print(f"'{ex.hotkeys['select2']}' 단축키 (선택 2) 설정됨.")
+        if ex.hotkeys.get("select3"):
+            keyboard.add_hotkey(ex.hotkeys["select3"], lambda: ex.selection_requested.emit(2))
+            print(f"'{ex.hotkeys['select3']}' 단축키 (선택 3) 설정됨.")
         print("전역 단축키 설정 완료.")
     except Exception as e:
         QMessageBox.warning(main_window, "경고", f"전역 단축키 설정 실패: {e}\n관리자 권한으로 실행해보세요.")

@@ -112,7 +112,10 @@ class DBEditorApp(QWidget):
     
     # --- (이하 모든 함수는 변경 없음) ---
     def initUI(self):
-        self.setWindowTitle("스텔라 소라 DB 편집기 (v2.14.2)"); self.setGeometry(100, 100, 1000, 700); main_layout = QVBoxLayout(); self.tabs = QTabWidget(); self.tabs.addTab(self.create_userdecks_tab(), "내 덱 (user_decks.json)"); self.tabs.addTab(self.create_gamedata_tab(), "게임 데이터 (gamedata.json)"); self.tabs.setCurrentIndex(0); main_layout.addWidget(self.tabs); self.save_button = QPushButton("모든 변경사항 저장"); self.save_button.setStyleSheet("font-size: 16px; padding: 10px; background-color: #007bff; color: white;"); self.save_button.clicked.connect(self.save_all_data); main_layout.addWidget(self.save_button); self.setLayout(main_layout); self._setup_shortcuts()
+        self.setWindowTitle("스텔라 소라 DB 편집기 (v2.14.2)"); 
+        # (★★ 수정 ★★) self.setGeometry 제거 (메인 창에서 관리)
+        # self.setGeometry(100, 100, 1000, 700); 
+        main_layout = QVBoxLayout(); self.tabs = QTabWidget(); self.tabs.addTab(self.create_userdecks_tab(), "내 덱 (user_decks.json)"); self.tabs.addTab(self.create_gamedata_tab(), "게임 데이터 (gamedata.json)"); self.tabs.setCurrentIndex(0); main_layout.addWidget(self.tabs); self.save_button = QPushButton("모든 변경사항 저장"); self.save_button.setStyleSheet("font-size: 16px; padding: 10px; background-color: #007bff; color: white;"); self.save_button.clicked.connect(self.save_all_data); main_layout.addWidget(self.save_button); self.setLayout(main_layout); self._setup_shortcuts()
     def _setup_shortcuts(self): shortcut_add = QShortcut(QKeySequence("9"), self); shortcut_add.activated.connect(self.on_shortcut_add_potential)
     def on_shortcut_add_potential(self):
         if self.tabs.currentIndex() == 1: 
@@ -300,4 +303,3 @@ class DBEditorApp(QWidget):
             self.data_saved.emit() # 저장 완료 시그널 발생
             QMessageBox.information(self, "성공", f"{GAMEDATA_FILE} 와 {USERDECKS_FILE} 파일이 저장되었습니다.")
         except Exception as e: QMessageBox.critical(self, "오류", f"파일 저장 실패: {e}")
-
