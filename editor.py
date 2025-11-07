@@ -1,4 +1,4 @@
-# editor.py (v2.14 - 구조화된 스탯 편집 기능 추가)
+# editor.py (v2.14.2 - 파싱된 스탯 툴팁 표시)
 import sys
 import json
 import os
@@ -11,50 +11,39 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QShortcut, QKeySequence
 
-from tracker import DataParser
-
-# --- 경로 설정 함수 (변경 없음) ---
+# --- 경로 설정 및 상수 (이전과 동일) ---
 def get_datafile_path(relative_path):
     if getattr(sys, 'frozen', False): base_path = os.path.dirname(sys.executable)
     else: base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 GAMEDATA_FILE = get_datafile_path('gamedata.json')
 USERDECKS_FILE = get_datafile_path('user_decks.json')
-
-# --- (★수정★) 상수 정의에 STAT_TYPES 추가 ---
 STYLE_TYPES = [("main1", "메인유파1"), ("main2", "메인유파2"), ("main_common", "메인공용"), ("support1", "지원유파1"), ("support2", "지원유파2"), ("support_common", "지원공용")]
 ATTRIBUTES = ["빛", "어둠", "땅", "불", "물", "바람"]
 RARITIES = ["5성", "4성"]
 ATTRIBUTE_ORDER = {"빛": 0, "어둠": 1, "땅": 2, "불": 3, "물": 4, "바람": 5}
-# 스탯 종류 정의
-STAT_TYPES = [
-    "공격력 %", "공격력 고정", "스킬 피해 %", "일반 공격 피해 %",
-    "치명타 확률 %", "치명타 피해 %", "추가 피해 %",
-    "불 속성 피해 %", "물 속성 피해 %", "바람 속성 피해 %", 
-    "땅 속성 피해 %", "빛 속성 피해 %", "어둠 속성 피해 %",
-    "공격 속도 %", "이동 속도 %", "방어력 %", "방어력 고정",
-    "받는 피해 감소 %", "적 방어력 감소 %", "적 속성 저항 감소 %"
-]
-# ---------------------------------------------------
+STAT_TYPES = ["공격력 %", "공격력 고정", "스킬 피해 %", "일반 공격 피해 %", "치명타 확률 %", "치명타 피해 %", "추가 피해 %", "불 속성 피해 %", "물 속성 피해 %", "바람 속성 피해 %", "땅 속성 피해 %", "빛 속성 피해 %", "어둠 속성 피해 %", "공격 속도 %", "이동 속도 %", "방어력 %", "방어력 고정", "받는 피해 감소 %", "적 방어력 감소 %", "적 속성 저항 감소 %"]
 
+# --- (★신규★) tracker.py의 DataParser 클래스를 그대로 복사 ---
 class DataParser:
     def __init__(self):
-        self.data = {}
-        self.load_data_files()
+        self.data = {}; self.load_data_files()
     def load_data_files(self):
         files_to_load = ["HitDamage", "EffectValue", "OnceAdditionalAttributeValue", "BuffValue", "ScriptParameterValue"]
         for filename in files_to_load:
             try:
                 path = get_datafile_path(f'{filename}.json')
-                with open(path, 'r', encoding='utf-8') as f: self.data[filename] = json.load(f)
-            except Exception: self.data[filename] = {}
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    if content: self.data[filename] = json.loads(content)
+                    else: self.data[filename] = {}
+            except (FileNotFoundError, json.JSONDecodeError): self.data[filename] = {}
     def parse_param(self, param_str):
         parts = param_str.split(',');
         if len(parts) < 3: return None
         table_name, record_id = parts[0], parts[2]
         if table_name not in self.data or record_id not in self.data[table_name]: return None
-        record = self.data[table_name][record_id]
-        stat_name = f"{table_name} 효과"; value = 0.0
+        record = self.data[table_name][record_id]; stat_name = f"{table_name} 효과"; value = 0.0
         try:
             if table_name == "HitDamage": stat_name = "스킬 피해 %"; value = float(record.get("SkillPercentAmend", [0])[0]) / 10000.0
             elif table_name in ["EffectValue", "BuffValue"]: stat_name = "효과값 %"; value = float(record.get("EffectTypeParam1", "0.0")) * 100.0
@@ -63,103 +52,37 @@ class DataParser:
             else: return None
         except (ValueError, TypeError): return None
         return {"type": stat_name, "value": value}
-    
-    
-# --- 팝업 클래스 (PotentialDialog 대폭 수정) ---
+
+# --- 팝업 클래스들 (이전과 동일) ---
+# ... (생략)
 class PotentialDialog(QDialog):
     def __init__(self, title, defaults=None, parent=None):
-        super().__init__(parent)
-        self.setWindowTitle(title)
-        self.setMinimumWidth(500)
-        main_layout = QVBoxLayout(self)
-        form_layout = QFormLayout()
-        self.inputs = {}
-        defaults = defaults or {}
-
-        self.inputs['name'] = QLineEdit(defaults.get('name', ''))
-        form_layout.addRow(QLabel("이름:"), self.inputs['name'])
-
-        # --- 효과(effects) UI ---
-        self.effects_layout = QVBoxLayout()
-        self.effect_widgets = [] # (type_combo, value_edit) 튜플 저장
-        
-        # 기존 effects 데이터 불러오기
-        for effect in defaults.get('effects', []):
-            self.add_effect_line(effect.get("type"), str(effect.get("value", "0")))
-
-        add_effect_btn = QPushButton("효과 추가 (+)")
-        add_effect_btn.clicked.connect(lambda: self.add_effect_line())
-        
-        effects_group_box = QWidget()
-        group_layout = QVBoxLayout(effects_group_box)
-        group_layout.setContentsMargins(0,0,0,0)
-        group_layout.addLayout(self.effects_layout)
-        group_layout.addWidget(add_effect_btn, 0, Qt.AlignmentFlag.AlignRight)
-        
-        form_layout.addRow(QLabel("스탯 효과:"), effects_group_box)
-        # ------------------------
-
-        # --- Params UI (이전 버전과 동일, 참고용으로 유지) ---
-        self.params_layout = QVBoxLayout()
-        self.param_widgets = []
+        super().__init__(parent); self.setWindowTitle(title); self.setMinimumWidth(500); main_layout = QVBoxLayout(self); form_layout = QFormLayout(); self.inputs = {}; defaults = defaults or {}; self.inputs['name'] = QLineEdit(defaults.get('name', '')); form_layout.addRow(QLabel("이름:"), self.inputs['name']); self.effects_layout = QVBoxLayout(); self.effect_widgets = [];
+        for effect in defaults.get('effects', []): self.add_effect_line(effect.get("type"), str(effect.get("value", "0")))
+        add_effect_btn = QPushButton("효과 추가 (+)"); add_effect_btn.clicked.connect(lambda: self.add_effect_line()); effects_group_box = QWidget(); group_layout = QVBoxLayout(effects_group_box); group_layout.setContentsMargins(0,0,0,0); group_layout.addLayout(self.effects_layout); group_layout.addWidget(add_effect_btn, 0, Qt.AlignmentFlag.AlignRight); form_layout.addRow(QLabel("스탯 효과:"), effects_group_box);
+        self.params_layout = QVBoxLayout(); self.param_widgets = []
         for param_text in defaults.get('params', []): self.add_param_line(param_text)
-        add_param_btn = QPushButton("원본 Param 추가 (+)")
-        add_param_btn.clicked.connect(lambda: self.add_param_line())
-        params_group_box = QWidget()
-        group_layout_p = QVBoxLayout(params_group_box)
-        group_layout_p.setContentsMargins(0,0,0,0)
-        group_layout_p.addLayout(self.params_layout)
-        group_layout_p.addWidget(add_param_btn, 0, Qt.AlignmentFlag.AlignRight)
-        form_layout.addRow(QLabel("원본 데이터 (참고용):"), params_group_box)
-        # ------------------------
-        
-        main_layout.addLayout(form_layout)
-        button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
-        button_box.accepted.connect(self.accept); button_box.rejected.connect(self.reject)
-        main_layout.addWidget(button_box)
-
+        add_param_btn = QPushButton("원본 Param 추가 (+)"); add_param_btn.clicked.connect(lambda: self.add_param_line()); params_group_box = QWidget(); group_layout_p = QVBoxLayout(params_group_box); group_layout_p.setContentsMargins(0,0,0,0); group_layout_p.addLayout(self.params_layout); group_layout_p.addWidget(add_param_btn, 0, Qt.AlignmentFlag.AlignRight); form_layout.addRow(QLabel("원본 데이터 (참고용):"), params_group_box);
+        main_layout.addLayout(form_layout); button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel); button_box.accepted.connect(self.accept); button_box.rejected.connect(self.reject); main_layout.addWidget(button_box)
     def add_effect_line(self, type_str=None, value_str=""):
-        line_layout = QHBoxLayout()
-        type_combo = QComboBox(); type_combo.addItems(STAT_TYPES)
+        line_layout = QHBoxLayout(); type_combo = QComboBox(); type_combo.addItems(STAT_TYPES);
         if type_str and type_str in STAT_TYPES: type_combo.setCurrentText(type_str)
-        value_edit = QLineEdit(value_str)
-        remove_btn = QPushButton("X"); remove_btn.setFixedSize(25, 25)
-        
-        line_layout.addWidget(type_combo, 1); line_layout.addWidget(QLabel(" 값:")); line_layout.addWidget(value_edit, 1); line_layout.addWidget(remove_btn)
-        
-        widget_set = {"layout": line_layout, "type": type_combo, "value": value_edit, "button": remove_btn}
-        self.effect_widgets.append(widget_set)
-        remove_btn.clicked.connect(lambda: self.remove_line(widget_set, self.effect_widgets, self.effects_layout))
-        self.effects_layout.addLayout(line_layout)
-
+        value_edit = QLineEdit(value_str); remove_btn = QPushButton("X"); remove_btn.setFixedSize(25, 25); line_layout.addWidget(type_combo, 1); line_layout.addWidget(QLabel(" 값:")); line_layout.addWidget(value_edit, 1); line_layout.addWidget(remove_btn); widget_set = {"layout": line_layout, "type": type_combo, "value": value_edit, "button": remove_btn}; self.effect_widgets.append(widget_set); remove_btn.clicked.connect(lambda: self.remove_line(widget_set, self.effect_widgets, self.effects_layout)); self.effects_layout.addLayout(line_layout)
     def add_param_line(self, text=""):
-        line_layout = QHBoxLayout(); line_edit = QLineEdit(text); remove_btn = QPushButton("X"); remove_btn.setFixedSize(25, 25)
-        line_layout.addWidget(line_edit, 1); line_layout.addWidget(remove_btn)
-        widget_set = {"layout": line_layout, "input": line_edit, "button": remove_btn}
-        self.param_widgets.append(widget_set)
-        remove_btn.clicked.connect(lambda: self.remove_line(widget_set, self.param_widgets, self.params_layout))
-        self.params_layout.addLayout(line_layout)
-
+        line_layout = QHBoxLayout(); line_edit = QLineEdit(text); remove_btn = QPushButton("X"); remove_btn.setFixedSize(25, 25); line_layout.addWidget(line_edit, 1); line_layout.addWidget(remove_btn); widget_set = {"layout": line_layout, "input": line_edit, "button": remove_btn}; self.param_widgets.append(widget_set); remove_btn.clicked.connect(lambda: self.remove_line(widget_set, self.param_widgets, self.params_layout)); self.params_layout.addLayout(line_layout)
     def remove_line(self, widget_set, widget_list, layout):
         for i in reversed(range(widget_set["layout"].count())): 
             widget = widget_set["layout"].itemAt(i).widget()
             if widget: widget.deleteLater()
         layout.removeItem(widget_set["layout"]); widget_list.remove(widget_set)
-
     def get_data(self):
         effects = []
         for ws in self.effect_widgets:
-            try:
-                value = float(ws["value"].text().strip())
-                effects.append({"type": ws["type"].currentText(), "value": value})
-            except ValueError:
-                print(f"경고: 스탯 값 '{ws['value'].text()}'은(는) 유효한 숫자가 아니므로 무시됩니다.")
-        
+            try: effects.append({"type": ws["type"].currentText(), "value": float(ws["value"].text().strip())})
+            except ValueError: print(f"경고: 스탯 값 '{ws['value'].text()}' 무시됨.")
         params = [ws["input"].text().strip() for ws in self.param_widgets if ws["input"].text().strip()]
         return {'name': self.inputs['name'].text().strip(), 'effects': effects, 'params': params}
-
-class CharacterDialog(QDialog): # (변경 없음)
-    # ...
+class CharacterDialog(QDialog):
     def __init__(self, title, defaults=None, parent=None):
         super().__init__(parent); self.setWindowTitle(title); layout = QFormLayout(self); self.inputs = {}; self.inputs['name'] = QLineEdit(defaults.get('name', '') if defaults else ''); layout.addRow(QLabel("이름:"), self.inputs['name']); self.inputs['attribute'] = QComboBox(); self.inputs['attribute'].addItems(ATTRIBUTES);
         if defaults and defaults.get('attribute') in ATTRIBUTES: self.inputs['attribute'].setCurrentText(defaults.get('attribute'))
@@ -167,9 +90,7 @@ class CharacterDialog(QDialog): # (변경 없음)
         if defaults and defaults.get('rarity') in RARITIES: self.inputs['rarity'].setCurrentText(defaults.get('rarity'))
         layout.addRow(QLabel("성급:"), self.inputs['rarity']); button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel); button_box.accepted.connect(self.accept); button_box.rejected.connect(self.reject); layout.addWidget(button_box)
     def get_data(self): return {'name': self.inputs['name'].text().strip(), 'attribute': self.inputs['attribute'].currentText(), 'rarity': self.inputs['rarity'].currentText()}
-
-class InputDialog(QDialog): # (변경 없음)
-    # ...
+class InputDialog(QDialog):
     def __init__(self, title, fields, defaults=None, parent=None):
         super().__init__(parent); self.setWindowTitle(title); layout = QFormLayout(self); self.inputs = {}
         for i, field in enumerate(fields): default_text = defaults[i] if defaults and len(defaults) > i else ""; self.inputs[field] = QLineEdit(default_text); layout.addRow(QLabel(f"{field}:"), self.inputs[field])
@@ -179,25 +100,56 @@ class InputDialog(QDialog): # (변경 없음)
         for field, line_edit in self.inputs.items(): data[field] = line_edit.text().strip()
         return data
 
-# --- 메인 편집기 창 (add/edit_potential, on_character_selected 함수 수정) ---
+# --- 메인 편집기 창 ---
 class DBEditorApp(QWidget):
+    # ... (이전과 동일)
     STYLE_ICON_DEFAULT = "font-size: 10px; background-color: #f0f0f0; border: 1px dashed #aaa; text-align: bottom; padding-bottom: 5px;"
     STYLE_ICON_SELECTED = "font-size: 10px; background-color: #d0e7ff; border: 2px solid #007bff; text-align: bottom; padding-bottom: 5px;"
     def __init__(self):
-        super().__init__(); self.game_data = {}; self.user_decks = {}; self.character_map = {}; self.current_char_filter = None; self.char_filter_buttons = []; self.potential_add_buttons = {}; self.initUI(); self.load_all_data(); self.data_parser = DataParser()
+        super().__init__(); self.data_parser = DataParser(); self.game_data = {}; self.user_decks = {}; self.character_map = {}; self.current_char_filter = None; self.char_filter_buttons = []; self.potential_add_buttons = {}; self.initUI(); self.load_all_data()
 
+    # (★수정★) on_character_selected 함수만 수정
+    def on_character_selected(self, current_item, previous_item=None):
+        for key, _ in STYLE_TYPES:
+            if hasattr(self, f"potential_list_{key}"): getattr(self, f"potential_list_{key}").clear()
+        if not current_item: self.potential_tabs.setEnabled(False); return
+        self.potential_tabs.setEnabled(True); char_data = current_item.data(Qt.ItemDataRole.UserRole)
+        char_id = char_data.get("id")
+        if not char_id: return
+        
+        for pot in self.game_data.get("potentials", []):
+            if pot.get("character_id") == char_id:
+                style_key = pot.get("style_type")
+                if style_key and hasattr(self, f"potential_list_{style_key}"):
+                    list_widget = getattr(self, f"potential_list_{style_key}")
+                    list_item = QListWidgetItem(pot.get("name", "이름없음"))
+                    
+                    tooltip_parts = []
+                    # 1. 사용자 직접 입력 효과 (effects)
+                    effects_text = "\n".join([f"- {e['type']}: {e['value']}" for e in pot.get('effects', [])])
+                    if effects_text: tooltip_parts.append(f"입력된 효과:\n{effects_text}")
+                    
+                    # 2. Param 파싱 효과
+                    parsed_effects = []
+                    for param in pot.get('params', []):
+                        parsed = self.data_parser.parse_param(param)
+                        if parsed: parsed_effects.append(f"- {parsed['type']}: {parsed['value']:.1f}")
+                    if parsed_effects: tooltip_parts.append("파싱된 효과:\n" + "\n".join(parsed_effects))
+                    
+                    list_item.setToolTip("\n\n".join(tooltip_parts))
+                    
+                    list_item.setData(Qt.ItemDataRole.UserRole, pot)
+                    list_widget.addItem(list_item)
     
+    # --- (이하 모든 함수는 변경 없음) ---
     def initUI(self):
-        self.setWindowTitle("스텔라 소라 DB 편집기 (v2.14)"); self.setGeometry(100, 100, 1000, 700); main_layout = QVBoxLayout(); self.tabs = QTabWidget(); self.tabs.addTab(self.create_userdecks_tab(), "내 덱 (user_decks.json)"); self.tabs.addTab(self.create_gamedata_tab(), "게임 데이터 (gamedata.json)"); self.tabs.setCurrentIndex(0); main_layout.addWidget(self.tabs); self.save_button = QPushButton("모든 변경사항 저장"); self.save_button.setStyleSheet("font-size: 16px; padding: 10px; background-color: #007bff; color: white;"); self.save_button.clicked.connect(self.save_all_data); main_layout.addWidget(self.save_button); self.setLayout(main_layout)
-        self._setup_shortcuts()
-    def _setup_shortcuts(self):
-        shortcut_add = QShortcut(QKeySequence("9"), self); shortcut_add.activated.connect(self.on_shortcut_add_potential)
+        self.setWindowTitle("스텔라 소라 DB 편집기 (v2.14.2)"); self.setGeometry(100, 100, 1000, 700); main_layout = QVBoxLayout(); self.tabs = QTabWidget(); self.tabs.addTab(self.create_userdecks_tab(), "내 덱 (user_decks.json)"); self.tabs.addTab(self.create_gamedata_tab(), "게임 데이터 (gamedata.json)"); self.tabs.setCurrentIndex(0); main_layout.addWidget(self.tabs); self.save_button = QPushButton("모든 변경사항 저장"); self.save_button.setStyleSheet("font-size: 16px; padding: 10px; background-color: #007bff; color: white;"); self.save_button.clicked.connect(self.save_all_data); main_layout.addWidget(self.save_button); self.setLayout(main_layout); self._setup_shortcuts()
+    def _setup_shortcuts(self): shortcut_add = QShortcut(QKeySequence("9"), self); shortcut_add.activated.connect(self.on_shortcut_add_potential)
     def on_shortcut_add_potential(self):
         if self.tabs.currentIndex() == 1: 
             current_potential_tab_index = self.potential_tabs.currentIndex()
             if current_potential_tab_index != -1:
-                style_key = STYLE_TYPES[current_potential_tab_index][0]
-                add_button = self.potential_add_buttons.get(style_key)
+                style_key = STYLE_TYPES[current_potential_tab_index][0]; add_button = self.potential_add_buttons.get(style_key)
                 if add_button and add_button.isEnabled(): add_button.click()
     def create_gamedata_tab(self):
         widget = QWidget(); layout = QHBoxLayout(widget); main_splitter = QSplitter(Qt.Orientation.Horizontal); char_pot_splitter = QSplitter(Qt.Orientation.Horizontal); char_pot_splitter.addWidget(self.create_character_manager()); char_pot_splitter.addWidget(self.create_potential_manager()); main_splitter.addWidget(char_pot_splitter); sound_record_widget = QWidget(); sound_record_layout = QVBoxLayout(sound_record_widget); sound_record_layout.addWidget(self.create_list_manager_widget("sounds", "소리", ["name", "effect"])); sound_record_layout.addWidget(self.create_list_manager_widget("records", "레코드", ["name", "concerto_skill", "sounds_needed"])); main_splitter.addWidget(sound_record_widget); main_splitter.setSizes([700, 300]); layout.addWidget(main_splitter); return widget
@@ -221,7 +173,6 @@ class DBEditorApp(QWidget):
                 item = layout.takeAt(0)
                 if item.widget(): item.widget().deleteLater()
                 elif item.layout(): self.clear_layout(item.layout())
-
     def load_all_data(self):
         try:
             if os.path.exists(GAMEDATA_FILE):
@@ -232,7 +183,6 @@ class DBEditorApp(QWidget):
             else: self.user_decks = {}
             self.refresh_character_list(); self.refresh_character_filter_bar(); self.refresh_sound_and_record_lists(); self.refresh_all_potentials_list_in_deck_tab(); self.refresh_deck_list()
         except Exception as e: QMessageBox.critical(self, "오류", f"데이터 파일 로드 실패: {e}")
-
     def add_potential(self, style_key):
         selected_char_item = self.character_list.currentItem()
         if not selected_char_item: QMessageBox.warning(self, "알림", "먼저 캐릭터를 선택하세요."); return
@@ -244,7 +194,6 @@ class DBEditorApp(QWidget):
             new_pot = {"id": f"p_{uuid.uuid4()}", "character_id": char_data["id"], "style_type": style_key, **new_data}
             self.game_data["potentials"].append(new_pot)
             self.on_character_selected(selected_char_item); self.refresh_all_potentials_list_in_deck_tab()
-
     def edit_potential(self, list_widget):
         selected_item = list_widget.currentItem()
         if not selected_item: QMessageBox.warning(self, "알림", "수정할 잠재력을 선택하세요."); return
@@ -257,46 +206,6 @@ class DBEditorApp(QWidget):
                 if pot.get("id") == old_data.get("id"):
                     self.game_data["potentials"][i].update(new_data); break
             self.on_character_selected(self.character_list.currentItem()); self.refresh_all_potentials_list_in_deck_tab()
-
-    def on_character_selected(self, current_item, previous_item=None):
-        for key, _ in STYLE_TYPES:
-            if hasattr(self, f"potential_list_{key}"): getattr(self, f"potential_list_{key}").clear()
-        if not current_item: self.potential_tabs.setEnabled(False); return
-        self.potential_tabs.setEnabled(True); char_data = current_item.data(Qt.ItemDataRole.UserRole)
-        char_id = char_data.get("id")
-        if not char_id: return
-        
-        for pot in self.game_data.get("potentials", []):
-            if pot.get("character_id") == char_id:
-                style_key = pot.get("style_type")
-                if style_key and hasattr(self, f"potential_list_{style_key}"):
-                    list_widget = getattr(self, f"potential_list_{style_key}")
-                    list_item = QListWidgetItem(pot.get("name", "이름없음"))
-                    
-                    # --- 툴팁 내용 생성 ---
-                    tooltip_parts = []
-                    # 1. 사용자 직접 입력 효과
-                    effects_text = "\n".join([f"- {e['type']}: {e['value']}" for e in pot.get('effects', [])])
-                    if effects_text: tooltip_parts.append(f"입력된 효과:\n{effects_text}")
-                    
-                    # 2. Param 파싱 효과
-                    parsed_effects = []
-                    for param in pot.get('params', []):
-                        parsed = self.data_parser.parse_param(param)
-                        if parsed: parsed_effects.append(f"- {parsed['type']}: {parsed['value']:.1f}")
-                    if parsed_effects: tooltip_parts.append("파싱된 효과:\n" + "\n".join(parsed_effects))
-                    
-                    # 3. 원본 데이터
-                    params_text = "\n".join(pot.get('params', []))
-                    if params_text: tooltip_parts.append(f"원본 데이터:\n{params_text}")
-
-                    list_item.setToolTip("\n\n".join(tooltip_parts))
-                    # --- 툴팁 생성 끝 ---
-                    
-                    list_item.setData(Qt.ItemDataRole.UserRole, pot)
-                    list_widget.addItem(list_item)
-
-    # --- 이하 함수들은 변경이 거의 없거나 없습니다 ---
     def del_potential(self, list_widget):
         selected_item = list_widget.currentItem()
         if not selected_item: return

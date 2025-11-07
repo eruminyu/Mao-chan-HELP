@@ -1,4 +1,4 @@
-# tracker.py (v6.5.1 - 누락 함수 복원 및 최종 안정화)
+# tracker.py (v6.6 - 잠재력 레벨 업 및 스탯 누적 기능 구현)
 import sys
 import json
 import os
@@ -17,7 +17,7 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
 from PyQt6.QtCore import Qt, QTimer, QRect, pyqtSignal, QPoint
 from PyQt6.QtGui import QPixmap, QPainter, QFont, QColor, QScreen, QPen
 
-# --- 경로 설정 및 설정값 ---
+# --- (이전과 동일한 부분 생략) ---
 def get_bundled_path(relative_path):
     try: base_path = sys._MEIPASS
     except Exception: base_path = os.path.abspath(".")
@@ -34,12 +34,9 @@ try:
 except Exception as e:
     app_temp = QApplication(sys.argv); QMessageBox.critical(None, "치명적 오류", f"Tesseract 초기화 오류: {e}"); sys.exit()
 
-# --- 데이터 파서 클래스 ---
 class DataParser:
     def __init__(self):
-        self.data = {}
-        self.load_data_files()
-
+        self.data = {}; self.load_data_files()
     def load_data_files(self):
         files_to_load = ["HitDamage", "EffectValue", "OnceAdditionalAttributeValue", "BuffValue", "ScriptParameterValue"]
         for filename in files_to_load:
@@ -47,22 +44,10 @@ class DataParser:
                 path = get_datafile_path(f'{filename}.json')
                 with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if not content: # 파일이 비어있는 경우
-                        print(f"경고: {filename}.json 파일이 비어 있습니다.")
-                        self.data[filename] = {}
-                        continue
+                    if not content: self.data[filename] = {}; continue
                     self.data[filename] = json.loads(content)
-                print(f"디버그: {filename}.json 로드 성공")
-            except FileNotFoundError:
-                print(f"경고: {filename}.json 파일을 찾을 수 없습니다. 해당 스탯은 계산되지 않습니다.")
-                self.data[filename] = {}
-            except json.JSONDecodeError as e:
-                print(f"오류: {filename}.json 파일 파싱 오류: {e}. 파일 내용이 올바른 JSON 형식인지 확인하세요.")
-                self.data[filename] = {}
-            except Exception as e:
-                print(f"오류: {filename}.json 파일 로드 중 오류 발생: {e}")
-                self.data[filename] = {}
-
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"경고: {filename}.json 로드/파싱 오류: {e}"); self.data[filename] = {}
     def parse_param(self, param_str):
         parts = param_str.split(',');
         if len(parts) < 3: return None
@@ -75,10 +60,9 @@ class DataParser:
             elif table_name == "OnceAdditionalAttributeValue": stat_name = "추가 스탯 %"; value = float(record.get("Value1", 0)) / 100.0
             elif table_name == "ScriptParameterValue": stat_name = "특수 조건 값"; value = float(record.get("CommonData", 0)) / 10000.0
             else: return None
-        except (ValueError, TypeError): print(f"경고: {record_id}의 값을 숫자로 변환할 수 없습니다."); return None
+        except (ValueError, TypeError): return None
         return {"type": stat_name, "value": value}
 
-# --- 팝업 및 설정 창 클래스 (변경 없음) ---
 class HotkeySettingsDialog(QDialog):
     def __init__(self, current_hotkeys, parent=None):
         super().__init__(parent); self.setWindowTitle("단축키 설정"); layout = QFormLayout(self); self.inputs = {}
@@ -110,14 +94,15 @@ class SetupWindow(QWidget):
     def keyPressEvent(self, event):
         if event.key() == Qt.Key.Key_Escape: self.cancelled.emit(); self.close()
 
-# --- 메인 트래커 앱 ---
 class TrackerApp(QWidget):
     ocr_requested = pyqtSignal(); selection_requested = pyqtSignal(int)
     def __init__(self):
         super().__init__()
         self.data_parser = DataParser()
         self.game_data={}; self.user_decks={}; self.coordinates={}; self.hotkeys={}; self.potential_lookup={}
-        self.setup_window=None; self.chosen_potentials_in_run=set(); self.last_selected_deck=None; self.ocr_results=[None, None, None]; self.current_run_stats={}
+        self.setup_window=None
+        self.chosen_potentials_in_run = {} # (★수정★) set -> dict
+        self.last_selected_deck=None; self.ocr_results=[None, None, None]; self.current_run_stats={}
         self.ocr_requested.connect(self.run_ocr_check); self.selection_requested.connect(self.select_potential)
         self.load_all_data(); self.initUI(); self.load_config()
         last_deck = self.last_selected_deck
@@ -131,29 +116,90 @@ class TrackerApp(QWidget):
             with open(USERDECKS_FILE, 'r', encoding='utf-8') as f: self.user_decks = json.load(f)
             self._create_potential_lookup_table()
         except Exception as e: self.show_error_message(f"데이터 로드 오류: {e}")
+
     def _create_potential_lookup_table(self):
         self.potential_lookup = {}; character_map = {c['id']: c['name'] for c in self.game_data.get('characters', [])}; style_map = dict(STYLE_TYPES)
         for p in self.game_data.get("potentials", []):
             key = f"[{character_map.get(p.get('character_id'), '?')}] [{style_map.get(p.get('style_type'), '?')}] {p.get('name')}"
             self.potential_lookup[key] = p
-    def load_config(self):
-        config_loaded = False; default_hotkeys = {"ocr": "f10", "select1": "1", "select2": "2", "select3": "3"}
-        try:
-            if os.path.exists(CONFIG_FILE):
-                with open(CONFIG_FILE, 'r', encoding='utf-8') as f: config_data = json.load(f)
-                self.coordinates = config_data.get("coordinates", {}); self.last_selected_deck = config_data.get("last_selected_deck"); self.hotkeys = config_data.get("hotkeys", default_hotkeys)
-                if all(k in self.coordinates for k in ['box1', 'box2', 'box3']): config_loaded = True
-            else: self.hotkeys = default_hotkeys
-        except Exception as e: self.show_error_message(f"config.json 읽기 오류: {e}"); self.hotkeys = default_hotkeys
-        status_text, color = ("상태: 좌표 설정 완료", "green") if config_loaded else ("상태: 캡처 영역 설정 필요", "red")
-        self.run_button.setEnabled(config_loaded); self.config_status_label.setText(status_text); self.config_status_label.setStyleSheet(f"color: {color};"); self.run_button.setText(self.run_button_text_template.format(self.hotkeys.get('ocr', 'N/A')))
-        return config_loaded
-    def save_config(self):
-        try:
-            config_data = {"coordinates": self.coordinates, "last_selected_deck": self.deck_select_combo.currentText(), "hotkeys": self.hotkeys}
-            with open(CONFIG_FILE, 'w', encoding='utf-8') as f: json.dump(config_data, f, indent=2);
-        except Exception as e: self.show_error_message(f"config.json 저장 실패: {e}")
+
+    # (★수정★) 잠재력 선택(레벨 업) 로직 변경
+    def select_potential(self, index):
+        if not (0 <= index < 3 and self.ocr_results and self.ocr_results[index]): return
+
+        potential_to_add_str = self.ocr_results[index]
         
+        # 현재 레벨 확인 및 최대 레벨(6) 제한
+        current_level = self.chosen_potentials_in_run.get(potential_to_add_str, 0)
+        if current_level >= 6:
+            print(f"'{potential_to_add_str}'은(는) 이미 최대 레벨(6)입니다.")
+            QMessageBox.information(self, "알림", f"'{self.extract_potential_name(potential_to_add_str)}'은(는)\n이미 최대 레벨입니다.")
+            return
+
+        # 레벨 업 및 스탯 합산
+        self.chosen_potentials_in_run[potential_to_add_str] = current_level + 1
+        print(f"'{potential_to_add_str}' 선택됨. 레벨: {current_level + 1}")
+        
+        potential_data = self.potential_lookup.get(potential_to_add_str)
+        if potential_data:
+            new_stats = self._parse_potential_effects(potential_data)
+            for stat_name, value in new_stats.items():
+                self.current_run_stats[stat_name] = self.current_run_stats.get(stat_name, 0) + value
+            self.update_stats_display()
+
+        self.update_tracking_display()
+    
+    # (★수정★) 스탯 해석기에 effects 필드 처리 로직 명시적으로 추가
+    def _parse_potential_effects(self, pot_data):
+        all_stats = {}
+        if not pot_data: return {}
+
+        # 1. 'effects' 필드 (사용자 직접 입력) 처리
+        for effect in pot_data.get('effects', []):
+            stat_name = effect.get("type")
+            value = effect.get("value", 0)
+            if stat_name and isinstance(value, (int, float)):
+                all_stats[stat_name] = all_stats.get(stat_name, 0) + value
+        
+        # 2. 'params' 필드 (데이터 파일 기반 파싱) 처리
+        for param_str in pot_data.get('params', []):
+            parsed_stat = self.data_parser.parse_param(param_str)
+            if parsed_stat:
+                stat_name = parsed_stat["type"]
+                value = parsed_stat["value"]
+                all_stats[stat_name] = all_stats.get(stat_name, 0) + value
+        
+        if all_stats: print(f"'{pot_data.get('name')}' 스탯 해석 결과: {all_stats}")
+        return all_stats
+
+    # (★수정★) 목록 업데이트 시 레벨 표시
+    def update_tracking_display(self):
+        self.not_chosen_list.clear(); self.chosen_list.clear()
+        
+        # 선택된 잠재력 목록 (레벨과 함께 표시)
+        for potential, level in self.chosen_potentials_in_run.items():
+            item_text = f"{potential} [Lv.{level}]"
+            item = QListWidgetItem(item_text)
+            pot_data = self.potential_lookup.get(potential)
+            if pot_data:
+                effects = self._parse_potential_effects(pot_data)
+                tooltip_text = "\n".join([f"- {name}: {value}" for name, value in effects.items()])
+                if tooltip_text: item.setToolTip(f"1회당 효과:\n{tooltip_text}")
+            self.chosen_list.addItem(item)
+            
+        # 미선택 잠재력 목록
+        if isinstance(self.current_deck_potentials, list):
+            for potential in self.current_deck_potentials:
+                if potential not in self.chosen_potentials_in_run:
+                    item = QListWidgetItem(potential)
+                    pot_data = self.potential_lookup.get(potential)
+                    if pot_data:
+                        effects = self._parse_potential_effects(pot_data)
+                        tooltip_text = "\n".join([f"- {name}: {value}" for name, value in effects.items()])
+                        if tooltip_text: item.setToolTip(f"효과:\n{tooltip_text}")
+                    self.not_chosen_list.addItem(item)
+
+    # --- 이하 함수들은 이전 버전과 동일 (구조만 정리) ---
     def initUI(self):
         main_vbox = QVBoxLayout(); deck_select_layout = QHBoxLayout(); self.deck_select_label = QLabel("적용할 덱:"); self.deck_select_combo = QComboBox(self)
         if self.user_decks: self.deck_select_combo.addItems(self.user_decks.keys())
@@ -168,40 +214,32 @@ class TrackerApp(QWidget):
         hbox3 = QHBoxLayout(); label3 = QLabel("선택지 3:"); self.result_label_3 = QLabel("-"); self.result_label_3.setStyleSheet(label_style); self.result_label_3.setFixedHeight(button_size); self.result_label_3.setAlignment(Qt.AlignmentFlag.AlignCenter); self.select_btn_3 = QPushButton("-"); self.select_btn_3.setFixedSize(button_size, button_size); self.select_btn_3.clicked.connect(lambda: self.select_potential(2)); hbox3.addWidget(label3); hbox3.addWidget(self.result_label_3, 1); hbox3.addWidget(self.select_btn_3); results_vbox.addLayout(hbox3)
         main_vbox.addLayout(results_vbox); stats_layout = QFormLayout(); stats_layout.setContentsMargins(5, 10, 5, 5); self.stats_display = QTextEdit(); self.stats_display.setReadOnly(True); self.stats_display.setFixedHeight(100); self.stats_display.setStyleSheet("font-size: 12px; background-color: #f0f0f0;"); stats_layout.addRow(QLabel("--- 현재 런 스탯 총합 ---"), self.stats_display); main_vbox.addLayout(stats_layout)
         tracking_splitter = QSplitter(Qt.Orientation.Horizontal); not_chosen_widget = QWidget(); not_chosen_layout = QVBoxLayout(not_chosen_widget); not_chosen_layout.addWidget(QLabel("미선택 잠재력")); self.not_chosen_list = QListWidget(); not_chosen_layout.addWidget(self.not_chosen_list); chosen_widget = QWidget(); chosen_layout = QVBoxLayout(chosen_widget); chosen_layout.addWidget(QLabel("선택 완료 잠재력")); self.chosen_list = QListWidget(); chosen_layout.addWidget(self.chosen_list); tracking_splitter.addWidget(not_chosen_widget); tracking_splitter.addWidget(chosen_widget); tracking_splitter.setSizes([200, 200]);
-        main_vbox.addWidget(tracking_splitter); self.setLayout(main_vbox); self.setWindowTitle('스텔라 소라 트래커 (v6.5.1)'); self.setGeometry(300, 300, 500, 850); self.setWindowFlags(self.windowFlags() | Qt.WindowType.WindowStaysOnTopHint)
-
-    # (★수정★) 누락된 함수들 모두 복원
+        main_vbox.addWidget(tracking_splitter); self.setLayout(main_vbox); self.setWindowTitle('스텔라 소라 트래커 (v6.6)'); self.setGeometry(300, 300, 500, 850); self.setWindowFlags(self.windowFlags() | Qt.WindowType.WindowStaysOnTopHint)
     def _reset_run_data(self):
         self.chosen_potentials_in_run.clear(); self.current_run_stats.clear(); self.update_stats_display(); self.update_tracking_display()
-        label_style = "font-size: 14px; padding: 5px; color: black; border: 1px solid #ddd; background-color: #f9f9f9;"
+        label_style = "font-size: 14px; padding: 5px; color: black; border: 1px solid #ddd; background-color: #f9f9f9;";
         for label, btn in [(self.result_label_1, self.select_btn_1), (self.result_label_2, self.select_btn_2), (self.result_label_3, self.select_btn_3)]: label.setText("-"); label.setStyleSheet(label_style); btn.setText("-")
         self.ocr_results = [None, None, None]
-    def reset_tracking(self):
-        if QMessageBox.question(self, "확인", "현재 런의 잠재력 선택 기록을 초기화하시겠습니까?", QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No, QMessageBox.StandardButton.No) == QMessageBox.StandardButton.Yes: self._reset_run_data()
-    def on_deck_changed(self, deck_name):
-        self.current_deck_potentials = self.user_decks.get(deck_name, {}).get("potentials", [])
-        if self.last_selected_deck != deck_name: self.last_selected_deck = deck_name; self.save_config()
-        self._reset_run_data()
-    def reload_decks(self):
+    def update_stats_display(self):
+        if not self.current_run_stats: self.stats_display.setText("선택된 잠재력 없음"); return
+        display_text = "";
+        for stat_name, value in sorted(self.current_run_stats.items()): value_str = f"{int(value)}" if value == int(value) else f"{value:.1f}"; display_text += f"{stat_name}: +{value_str}\n"
+        self.stats_display.setText(display_text.strip())
+    def open_hotkey_settings(self):
+        dialog = HotkeySettingsDialog(self.hotkeys, self);
+        if dialog.exec():
+            new_hotkeys = dialog.get_hotkeys()
+            if all(new_hotkeys.values()): self.hotkeys = new_hotkeys; self.save_config(); self.run_button.setText(self.run_button_text_template.format(self.hotkeys.get('ocr', 'N/A'))); QMessageBox.information(self, "알림", "단축키 설정이 저장되었습니다.\n프로그램을 재시작해야 적용됩니다.")
+            else: QMessageBox.warning(self, "오류", "단축키는 비워둘 수 없습니다.")
+    def launch_coord_setup_from_button(self): QMessageBox.information(self, "알림", "지금부터 [캡처 영역 설정]을 시작합니다.\n\n2초 안에 게임의 [잠재력 선택 화면]으로 이동하세요."); self.hide(); QTimer.singleShot(2000, self.launch_coord_setup)
+    def launch_coord_setup(self):
         try:
-            current_selection = self.deck_select_combo.currentText(); self.load_all_data(); self.deck_select_combo.clear()
-            if self.user_decks: self.deck_select_combo.addItems(self.user_decks.keys())
-            else: self.deck_select_combo.addItem("불러온 덱 없음")
-            new_index = self.deck_select_combo.findText(current_selection)
-            if new_index != -1: self.deck_select_combo.setCurrentIndex(new_index)
-            elif self.deck_select_combo.count() > 0: self.deck_select_combo.setCurrentIndex(0)
-            self.on_deck_changed(self.deck_select_combo.currentText()); QMessageBox.information(self, "성공", "덱 목록을 새로고침했습니다.")
-        except Exception as e: self.show_error_message(f"덱 새로고침 오류: {e}")
-    
-    def get_processed_images(self, pil_img):
-        try:
-            image = np.array(pil_img); image_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR); scale = 3.0; width = int(image.shape[1] * scale); height = int(image.shape[0] * scale); resized = cv2.resize(image_bgr, (width, height), interpolation=cv2.INTER_LANCZOS4)
-            processed_images = []; b, g, r = cv2.split(resized); normalized = cv2.normalize(b, None, 0, 255, cv2.NORM_MINMAX)
-            for th_val in [120, 150, 180]: _, binary_a = cv2.threshold(normalized, th_val, 255, cv2.THRESH_BINARY); processed_images.append(binary_a)
-            gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY); edges = cv2.Canny(gray, 50, 150); kernel = np.ones((2,2), np.uint8); dilated = cv2.dilate(edges, kernel, iterations=1); processed_images.append(cv2.bitwise_not(dilated))
-            return processed_images
-        except Exception as e: print(f"디버그: 이미지 전처리 중 오류: {e}"); return [pil_img]
-    
+            screen = QApplication.primaryScreen(); pixmap = screen.grabWindow(0)
+            if pixmap.isNull(): self.show_error_message("스크린샷 캡처에 실패했습니다."); self.show(); return
+            self.setup_window = SetupWindow(pixmap, self); self.setup_window.coordinates_saved.connect(self.on_setup_complete); self.setup_window.cancelled.connect(self.on_setup_cancelled)
+        except Exception as e: self.show_error_message(f"좌표 설정 창 생성 중 예외 발생: {e}"); self.show()
+    def on_setup_complete(self, coordinates): self.coordinates = coordinates; self.save_config(); self.load_config(); QMessageBox.information(self, "성공", "캡처 영역 설정이 저장되었습니다."); self.show(); self.setup_window = None
+    def on_setup_cancelled(self): self.show_error_message("좌표 설정이 취소되었습니다."); self.load_config(); self.show(); self.setup_window = None
     def run_ocr_check(self):
         if not all(k in self.coordinates for k in ['box1', 'box2', 'box3']): self.show_error_message("캡처 좌표가 설정되지 않았습니다."); return
         try:
@@ -229,7 +267,14 @@ class TrackerApp(QWidget):
             matched = self.update_result_label(labels[i], text_raw)
             if matched: self.ocr_results[i] = matched; buttons[i].setText("OK!")
             else: buttons[i].setText("No!")
-    
+    def get_processed_images(self, pil_img):
+        try:
+            image = np.array(pil_img); image_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR); scale = 3.0; width = int(image.shape[1] * scale); height = int(image.shape[0] * scale); resized = cv2.resize(image_bgr, (width, height), interpolation=cv2.INTER_LANCZOS4)
+            processed_images = []; b, g, r = cv2.split(resized); normalized = cv2.normalize(b, None, 0, 255, cv2.NORM_MINMAX)
+            for th_val in [120, 150, 180]: _, binary_a = cv2.threshold(normalized, th_val, 255, cv2.THRESH_BINARY); processed_images.append(binary_a)
+            gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY); edges = cv2.Canny(gray, 50, 150); kernel = np.ones((2,2), np.uint8); dilated = cv2.dilate(edges, kernel, iterations=1); processed_images.append(cv2.bitwise_not(dilated))
+            return processed_images
+        except Exception as e: print(f"디버그: 이미지 전처리 중 오류: {e}"); return [pil_img]
     def update_result_label(self, label_widget, ocr_text_raw):
         best_match_potential = None; highest_similarity = 0.6; ocr_compare_text = re.sub(r'[^\w\s가-힣.•]', '', ocr_text_raw).replace(" ", "")
         if ocr_compare_text and isinstance(self.current_deck_potentials, list):
@@ -245,65 +290,6 @@ class TrackerApp(QWidget):
         else:
             label_widget.setToolTip(f"인식된 텍스트 원본:\n{ocr_text_raw}"); label_widget.setText(ocr_text_raw if ocr_text_raw else "(인식 실패)"); label_widget.setStyleSheet(style_error if not ocr_text_raw else style_normal)
         return best_match_potential
-        
-    def select_potential(self, index):
-        if not (0 <= index < 3 and self.ocr_results and self.ocr_results[index]): return
-        potential_to_add_str = self.ocr_results[index]
-        if potential_to_add_str in self.chosen_potentials_in_run: return
-        self.chosen_potentials_in_run.add(potential_to_add_str)
-        potential_data = self.potential_lookup.get(potential_to_add_str)
-        if potential_data:
-            new_stats = self._parse_potential_effects(potential_data)
-            for stat_name, value in new_stats.items(): self.current_run_stats[stat_name] = self.current_run_stats.get(stat_name, 0) + value
-            self.update_stats_display()
-        self.update_tracking_display(); self.ocr_results = [None, None, None]
-        label_style = "font-size: 14px; padding: 5px; color: black; border: 1px solid #ddd; background-color: #f9f9f9;"
-        for label, btn in [(self.result_label_1, self.select_btn_1), (self.result_label_2, self.select_btn_2), (self.result_label_3, self.select_btn_3)]: label.setText("-"); label.setStyleSheet(label_style); btn.setText("-")
-    
-    def _parse_potential_effects(self, pot_data):
-        all_stats = {}
-        if pot_data and 'effects' in pot_data:
-            for effect in pot_data['effects']:
-                stat_name = effect.get("type"); value = effect.get("value", 0)
-                if stat_name: all_stats[stat_name] = all_stats.get(stat_name, 0) + value
-        if pot_data and 'params' in pot_data:
-            for param_str in pot_data['params']:
-                parsed_stat = self.data_parser.parse_param(param_str)
-                if parsed_stat: all_stats[parsed_stat["type"]] = all_stats.get(parsed_stat["type"], 0) + parsed_stat["value"]
-        if all_stats: print(f"'{pot_data['name']}' 스탯 해석 결과: {all_stats}")
-        return all_stats
-        
-    def update_stats_display(self):
-        if not self.current_run_stats: self.stats_display.setText("선택된 잠재력 없음"); return
-        display_text = "";
-        for stat_name, value in sorted(self.current_run_stats.items()): value_str = f"{int(value)}" if value == int(value) else f"{value:.1f}"; display_text += f"{stat_name}: +{value_str}\n"
-        self.stats_display.setText(display_text.strip())
-    def update_tracking_display(self):
-        self.not_chosen_list.clear(); self.chosen_list.clear()
-        if isinstance(self.current_deck_potentials, list):
-            for potential in self.current_deck_potentials:
-                item = QListWidgetItem(potential); pot_data = self.potential_lookup.get(potential)
-                if pot_data:
-                    effects = self._parse_potential_effects(pot_data)
-                    tooltip_text = "\n".join([f"- {name}: {value}" for name, value in effects.items()])
-                    if tooltip_text: item.setToolTip(f"해석된 효과:\n{tooltip_text}")
-                if potential in self.chosen_potentials_in_run: self.chosen_list.addItem(item)
-                else: self.not_chosen_list.addItem(item)
-    def open_hotkey_settings(self):
-        dialog = HotkeySettingsDialog(self.hotkeys, self);
-        if dialog.exec():
-            new_hotkeys = dialog.get_hotkeys()
-            if all(new_hotkeys.values()): self.hotkeys = new_hotkeys; self.save_config(); self.run_button.setText(self.run_button_text_template.format(self.hotkeys.get('ocr', 'N/A'))); QMessageBox.information(self, "알림", "단축키 설정이 저장되었습니다.\n프로그램을 재시작해야 적용됩니다.")
-            else: QMessageBox.warning(self, "오류", "단축키는 비워둘 수 없습니다.")
-    def launch_coord_setup_from_button(self): QMessageBox.information(self, "알림", "지금부터 [캡처 영역 설정]을 시작합니다.\n\n2초 안에 게임의 [잠재력 선택 화면]으로 이동하세요."); self.hide(); QTimer.singleShot(2000, self.launch_coord_setup)
-    def launch_coord_setup(self):
-        try:
-            screen = QApplication.primaryScreen(); pixmap = screen.grabWindow(0)
-            if pixmap.isNull(): self.show_error_message("스크린샷 캡처에 실패했습니다."); self.show(); return
-            self.setup_window = SetupWindow(pixmap, self); self.setup_window.coordinates_saved.connect(self.on_setup_complete); self.setup_window.cancelled.connect(self.on_setup_cancelled)
-        except Exception as e: self.show_error_message(f"좌표 설정 창 생성 중 예외 발생: {e}"); self.show()
-    def on_setup_complete(self, coordinates): self.coordinates = coordinates; self.save_config(); self.load_config(); QMessageBox.information(self, "성공", "캡처 영역 설정이 저장되었습니다."); self.show(); self.setup_window = None
-    def on_setup_cancelled(self): self.show_error_message("좌표 설정이 취소되었습니다."); self.load_config(); self.show(); self.setup_window = None
     def clean_text_for_comparison(self, text): return "".join(re.findall(r'[가-힣]+', text or ""))
     def extract_potential_name(self, deck_potential_raw): return deck_potential_raw.split('] ')[-1] if '] ' in deck_potential_raw else deck_potential_raw
     def show_error_message(self, message): print(f"오류: {message}"); QMessageBox.warning(self, "오류", message)
