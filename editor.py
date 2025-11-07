@@ -3,55 +3,22 @@ import sys
 import json
 import os
 import uuid
+import shutil
+from datetime import datetime
 from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QListWidget, QListWidgetItem,
                              QLineEdit, QTabWidget, QSplitter, QMessageBox,
                              QFormLayout, QDialog, QDialogButtonBox, QScrollArea,
                              QComboBox)
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QShortcut, QKeySequence
+from common_utils import get_datafile_path, DataParser, GAMEDATA_FILE, USERDECKS_FILE, STYLE_TYPES
 
-# --- 경로 설정 및 상수 (이전과 동일) ---
-def get_datafile_path(relative_path):
-    if getattr(sys, 'frozen', False): base_path = os.path.dirname(sys.executable)
-    else: base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
-GAMEDATA_FILE = get_datafile_path('gamedata.json')
-USERDECKS_FILE = get_datafile_path('user_decks.json')
-STYLE_TYPES = [("main1", "메인유파1"), ("main2", "메인유파2"), ("main_common", "메인공용"), ("support1", "지원유파1"), ("support2", "지원유파2"), ("support_common", "지원공용")]
+# --- 상수 ---
 ATTRIBUTES = ["빛", "어둠", "땅", "불", "물", "바람"]
 RARITIES = ["5성", "4성"]
 ATTRIBUTE_ORDER = {"빛": 0, "어둠": 1, "땅": 2, "불": 3, "물": 4, "바람": 5}
 STAT_TYPES = ["공격력 %", "공격력 고정", "스킬 피해 %", "일반 공격 피해 %", "치명타 확률 %", "치명타 피해 %", "추가 피해 %", "불 속성 피해 %", "물 속성 피해 %", "바람 속성 피해 %", "땅 속성 피해 %", "빛 속성 피해 %", "어둠 속성 피해 %", "공격 속도 %", "이동 속도 %", "방어력 %", "방어력 고정", "받는 피해 감소 %", "적 방어력 감소 %", "적 속성 저항 감소 %"]
-
-# --- (★신규★) tracker.py의 DataParser 클래스를 그대로 복사 ---
-class DataParser:
-    def __init__(self):
-        self.data = {}; self.load_data_files()
-    def load_data_files(self):
-        files_to_load = ["HitDamage", "EffectValue", "OnceAdditionalAttributeValue", "BuffValue", "ScriptParameterValue"]
-        for filename in files_to_load:
-            try:
-                path = get_datafile_path(f'{filename}.json')
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if content: self.data[filename] = json.loads(content)
-                    else: self.data[filename] = {}
-            except (FileNotFoundError, json.JSONDecodeError): self.data[filename] = {}
-    def parse_param(self, param_str):
-        parts = param_str.split(',');
-        if len(parts) < 3: return None
-        table_name, record_id = parts[0], parts[2]
-        if table_name not in self.data or record_id not in self.data[table_name]: return None
-        record = self.data[table_name][record_id]; stat_name = f"{table_name} 효과"; value = 0.0
-        try:
-            if table_name == "HitDamage": stat_name = "스킬 피해 %"; value = float(record.get("SkillPercentAmend", [0])[0]) / 10000.0
-            elif table_name in ["EffectValue", "BuffValue"]: stat_name = "효과값 %"; value = float(record.get("EffectTypeParam1", "0.0")) * 100.0
-            elif table_name == "OnceAdditionalAttributeValue": stat_name = "추가 스탯 %"; value = float(record.get("Value1", 0)) / 100.0
-            elif table_name == "ScriptParameterValue": stat_name = "특수 조건 값"; value = float(record.get("CommonData", 0)) / 10000.0
-            else: return None
-        except (ValueError, TypeError): return None
-        return {"type": stat_name, "value": value}
 
 # --- 팝업 클래스들 (이전과 동일) ---
 # ... (생략)
@@ -102,6 +69,8 @@ class InputDialog(QDialog):
 
 # --- 메인 편집기 창 ---
 class DBEditorApp(QWidget):
+    data_saved = pyqtSignal() # 데이터 저장 시그널
+
     # ... (이전과 동일)
     STYLE_ICON_DEFAULT = "font-size: 10px; background-color: #f0f0f0; border: 1px dashed #aaa; text-align: bottom; padding-bottom: 5px;"
     STYLE_ICON_SELECTED = "font-size: 10px; background-color: #d0e7ff; border: 2px solid #007bff; text-align: bottom; padding-bottom: 5px;"
@@ -133,7 +102,7 @@ class DBEditorApp(QWidget):
                     parsed_effects = []
                     for param in pot.get('params', []):
                         parsed = self.data_parser.parse_param(param)
-                        if parsed: parsed_effects.append(f"- {parsed['type']}: {parsed['value']:.1f}")
+                        if parsed: parsed_effects.append(f"- {parsed['type']}: {parsed['value']:.2f}")
                     if parsed_effects: tooltip_parts.append("파싱된 효과:\n" + "\n".join(parsed_effects))
                     
                     list_item.setToolTip("\n\n".join(tooltip_parts))
@@ -302,16 +271,33 @@ class DBEditorApp(QWidget):
         deck_potentials.append(display_text); self.current_deck_potentials_list.addItem(QListWidgetItem(display_text))
     def remove_potential_from_deck(self):
         selected_deck_item = self.decks_list.currentItem(); selected_deck_potential_item = self.current_deck_potentials_list.currentItem()
-        if not (selected_deck_item and selected_deck_potential_item): return
+        if not (selected_deck_item and selected_deck_potential_item): return 
         deck_name = selected_deck_item.text(); display_text = selected_deck_potential_item.text()
         if display_text in self.user_decks[deck_name]["potentials"]: self.user_decks[deck_name]["potentials"].remove(display_text)
         self.current_deck_potentials_list.takeItem(self.current_deck_potentials_list.row(selected_deck_potential_item))
+    
+    def _create_backup(self, file_path):
+        if not os.path.exists(file_path):
+            return # 백업할 원본 파일이 없으면 넘어감
+
+        backup_dir = os.path.join(os.path.dirname(file_path), "backup")
+        os.makedirs(backup_dir, exist_ok=True)
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = os.path.basename(file_path)
+        backup_file_name = f"{os.path.splitext(file_name)[0]}_{timestamp}{os.path.splitext(file_name)[1]}"
+        backup_path = os.path.join(backup_dir, backup_file_name)
+        
+        shutil.copy2(file_path, backup_path)
+        print(f"백업 생성: {backup_path}")
+
     def save_all_data(self):
         try:
+            self._create_backup(GAMEDATA_FILE)
+            self._create_backup(USERDECKS_FILE)
             with open(GAMEDATA_FILE, 'w', encoding='utf-8') as f: json.dump(self.game_data, f, indent=2, ensure_ascii=False)
             with open(USERDECKS_FILE, 'w', encoding='utf-8') as f: json.dump(self.user_decks, f, indent=2, ensure_ascii=False)
+            self.data_saved.emit() # 저장 완료 시그널 발생
             QMessageBox.information(self, "성공", f"{GAMEDATA_FILE} 와 {USERDECKS_FILE} 파일이 저장되었습니다.")
         except Exception as e: QMessageBox.critical(self, "오류", f"파일 저장 실패: {e}")
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv); ex = DBEditorApp(); ex.show(); sys.exit(app.exec())

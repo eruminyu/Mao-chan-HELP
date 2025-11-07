@@ -16,52 +16,20 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QSplitter, QLineEdit, QDialogButtonBox, QTextEdit)
 from PyQt6.QtCore import Qt, QTimer, QRect, pyqtSignal, QPoint
 from PyQt6.QtGui import QPixmap, QPainter, QFont, QColor, QScreen, QPen
+from common_utils import get_datafile_path, DataParser, GAMEDATA_FILE, USERDECKS_FILE, STYLE_TYPES
 
 # --- (이전과 동일한 부분 생략) ---
 def get_bundled_path(relative_path):
     try: base_path = sys._MEIPASS
     except Exception: base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
-def get_datafile_path(relative_path):
-    if getattr(sys, 'frozen', False): base_path = os.path.dirname(sys.executable)
-    else: base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+
 YOUR_TESSERACT_PATH = get_bundled_path(os.path.join('tesseract_bundle', 'tesseract.exe'))
-CONFIG_FILE = get_datafile_path('config.json'); GAMEDATA_FILE = get_datafile_path('gamedata.json'); USERDECKS_FILE = get_datafile_path('user_decks.json')
-STYLE_TYPES = [("main1", "메인유파1"), ("main2", "메인유파2"), ("main_common", "메인공용"), ("support1", "지원유파1"), ("support2", "지원유파2"), ("support_common", "지원공용")]
+CONFIG_FILE = get_datafile_path('config.json')
 try:
     pytesseract.pytesseract.tesseract_cmd = YOUR_TESSERACT_PATH; pytesseract.get_tesseract_version()
 except Exception as e:
     app_temp = QApplication(sys.argv); QMessageBox.critical(None, "치명적 오류", f"Tesseract 초기화 오류: {e}"); sys.exit()
-
-class DataParser:
-    def __init__(self):
-        self.data = {}; self.load_data_files()
-    def load_data_files(self):
-        files_to_load = ["HitDamage", "EffectValue", "OnceAdditionalAttributeValue", "BuffValue", "ScriptParameterValue"]
-        for filename in files_to_load:
-            try:
-                path = get_datafile_path(f'{filename}.json')
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if not content: self.data[filename] = {}; continue
-                    self.data[filename] = json.loads(content)
-            except (FileNotFoundError, json.JSONDecodeError) as e:
-                print(f"경고: {filename}.json 로드/파싱 오류: {e}"); self.data[filename] = {}
-    def parse_param(self, param_str):
-        parts = param_str.split(',');
-        if len(parts) < 3: return None
-        table_name, record_id = parts[0], parts[2]
-        if table_name not in self.data or record_id not in self.data[table_name]: return None
-        record = self.data[table_name][record_id]; stat_name = f"{table_name} 효과"; value = 0.0
-        try:
-            if table_name == "HitDamage": stat_name = "스킬 피해 %"; value = float(record.get("SkillPercentAmend", [0])[0]) / 10000.0
-            elif table_name in ["EffectValue", "BuffValue"]: stat_name = "효과값 %"; value = float(record.get("EffectTypeParam1", "0.0")) * 100.0
-            elif table_name == "OnceAdditionalAttributeValue": stat_name = "추가 스탯 %"; value = float(record.get("Value1", 0)) / 100.0
-            elif table_name == "ScriptParameterValue": stat_name = "특수 조건 값"; value = float(record.get("CommonData", 0)) / 10000.0
-            else: return None
-        except (ValueError, TypeError): return None
-        return {"type": stat_name, "value": value}
 
 class HotkeySettingsDialog(QDialog):
     def __init__(self, current_hotkeys, parent=None):
@@ -104,11 +72,20 @@ class TrackerApp(QWidget):
         self.chosen_potentials_in_run = {} # (★수정★) set -> dict
         self.last_selected_deck=None; self.ocr_results=[None, None, None]; self.current_run_stats={}
         self.ocr_requested.connect(self.run_ocr_check); self.selection_requested.connect(self.select_potential)
-        self.load_all_data(); self.initUI(); self.load_config()
-        last_deck = self.last_selected_deck
-        if last_deck and self.deck_select_combo.findText(last_deck) != -1: self.deck_select_combo.setCurrentText(last_deck)
+
+        # (★수정★) 초기화 순서 변경: 데이터 및 설정 로드 -> UI 초기화 -> 덱 선택
+        self.load_all_data() # self.game_data, self.user_decks 로드
+        self.load_config() # self.coordinates, self.hotkeys, self.last_selected_deck 로드
+        self.initUI() # UI 구성 (self.user_decks 사용)
+        if self.last_selected_deck and self.deck_select_combo.findText(self.last_selected_deck) != -1: self.deck_select_combo.setCurrentText(self.last_selected_deck)
         elif self.deck_select_combo.count() > 0: self.deck_select_combo.setCurrentIndex(0)
         self.on_deck_changed(self.deck_select_combo.currentText())
+
+    def reload_all_data_and_decks(self):
+        """에디터에서 저장 후 호출될 데이터 리로드 함수"""
+        print("에디터 저장 감지: 데이터 및 덱 새로고침")
+        self.load_all_data()
+        self.reload_decks()
 
     def load_all_data(self):
         try:
@@ -116,6 +93,13 @@ class TrackerApp(QWidget):
             with open(USERDECKS_FILE, 'r', encoding='utf-8') as f: self.user_decks = json.load(f)
             self._create_potential_lookup_table()
         except Exception as e: self.show_error_message(f"데이터 로드 오류: {e}")
+
+    def reload_decks(self):
+        """덱 목록을 새로고침하고, 마지막 선택된 덱을 다시 선택합니다."""
+        self.deck_select_combo.clear()
+        if self.user_decks: self.deck_select_combo.addItems(self.user_decks.keys())
+        else: self.deck_select_combo.addItem("불러온 덱 없음")
+        self.on_deck_changed(self.deck_select_combo.currentText()) # 새로고침 후 현재 선택된 덱으로 UI 업데이트
 
     def _create_potential_lookup_table(self):
         self.potential_lookup = {}; character_map = {c['id']: c['name'] for c in self.game_data.get('characters', [])}; style_map = dict(STYLE_TYPES)
@@ -198,6 +182,13 @@ class TrackerApp(QWidget):
                         tooltip_text = "\n".join([f"- {name}: {value}" for name, value in effects.items()])
                         if tooltip_text: item.setToolTip(f"효과:\n{tooltip_text}")
                     self.not_chosen_list.addItem(item)
+
+    def on_deck_changed(self, deck_name):
+        if deck_name in self.user_decks:
+            self.current_deck_potentials = self.user_decks[deck_name].get("potentials", [])
+            self.last_selected_deck = deck_name
+            self.save_config()
+        self._reset_run_data()
 
     # --- 이하 함수들은 이전 버전과 동일 (구조만 정리) ---
     def initUI(self):
@@ -294,15 +285,5 @@ class TrackerApp(QWidget):
     def extract_potential_name(self, deck_potential_raw): return deck_potential_raw.split('] ')[-1] if '] ' in deck_potential_raw else deck_potential_raw
     def show_error_message(self, message): print(f"오류: {message}"); QMessageBox.warning(self, "오류", message)
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv); ex = TrackerApp()
-    try:
-        if ex.hotkeys.get("ocr"): keyboard.add_hotkey(ex.hotkeys["ocr"], ex.ocr_requested.emit)
-        if ex.hotkeys.get("select1"): keyboard.add_hotkey(ex.hotkeys["select1"], lambda: ex.selection_requested.emit(0))
-        if ex.hotkeys.get("select2"): keyboard.add_hotkey(ex.hotkeys["select2"], lambda: ex.selection_requested.emit(1))
-        if ex.hotkeys.get("select3"): keyboard.add_hotkey(ex.hotkeys["select3"], lambda: ex.selection_requested.emit(2))
-        print("전역 단축키 설정 완료.")
-    except Exception as e: QMessageBox.warning(ex, "경고", f"전역 단축키 설정 실패: {e}\n관리자 권한으로 실행해보세요.")
-    if not ex.load_config(): ex.hide(); QTimer.singleShot(100, ex.launch_coord_setup_from_button)
-    else: ex.show()
-    sys.exit(app.exec())
+
+     # 이 파일은 이제 단독으로 실행되지 않습니다. 'Mao-chan_Helper.py'를 실행하세요.
